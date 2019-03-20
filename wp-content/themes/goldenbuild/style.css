@@ -1,0 +1,189 @@
+/*
+Theme Name: goldenbuild
+Theme URI: -
+Author: - mdadash
+Author URI: -
+Description: Description
+ */
+
+ /* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0; /* обнуляем внешние отступы */
+    padding: 0; /* обнуляем внутренние отступы */
+    border: 0; /* убираем бордюры */
+    outline: 0; /* убираем контуры */
+}
+ol, ul {
+    list-style-position: inside; 
+}
+a {  
+    cursor: pointer;
+    color: #414447;
+    font-family: inherit;
+    text-decoration:none;
+    outline: none; 
+}
+a,
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+* {
+    box-sizing: border-box;
+}
+body, html {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    background-color: #fff;
+    color: #484746;
+    font-size: 16px;
+    font-weight: 300;
+}
+h3 {
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+}
+
+
+/*  to fix footer to the page bottom if not enough content
+___________________________________________________________________________  */
+body, html {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+footer {
+    flex: 0 0  auto;
+}
+/* ___________________________________________________________________________  */
+
+header {
+	background: url(images/header-bg.jpg) no-repeat center;
+	background-color: red;
+}
+
+.repairs-type h4 {
+	background: #f5c905;
+	padding: 20px;
+	text-align: center;
+	color: #000000;
+	margin-bottom: 10px;
+}
+.repairs-type img {
+	width: 100%;
+}
+.repairs-type p {
+	font-size: 30px;
+	text-align: center;
+
+}
+.repairs-type span {
+	color: #ff0000;
+	font-size: 36px;
+	font-weight: bold;
+}
+.repairs-type ul {
+	font-size: 24px;
+	color: #484746;
+}
+
+.services {
+	color: #fff;
+	padding: 35px 0 65px;
+	background: url(images/aditionalserv-bg.jpg) no-repeat center;
+}
+.services img {
+	width: 100%;
+}
+.services__item {
+	position: relative;
+}
+.services__item p {
+	position: absolute;
+	font-size: 30px;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+}
+
+.advantages {
+	font-size: 30px;
+	padding: 50px 0;
+}
+.advantages ul {
+	list-style: none;
+}
+.advantages img {
+	width: 100%;
+	height: 245px;
+	display: inline-block;
+	margin: 10px 0;
+}
+
+.contractor {
+	text-align: justify;
+	font-size: 24px;
+	padding: 50px 0;
+}
+.contractor li {
+	margin: 10px 0;
+}
+
+
+.form-section {
+	background-color: #f5c905;
+}
+.form-section p {
+	color: #050505;
+	font-weight: bold;
+	font-size: 24px;
+	margin: 10px;
+}
+
+
+
+/* ______________footer styles________________*/
+footer {
+	background-color: #000;
+	color: #aaa9a9;
+	padding: 25px 0 15px;
+	font-size: 18px;
+}
+.footer__contacts {
+	font-size: 30px;
+}
+.social-icons a {
+	display: inline-block;
+	width: 67px;
+	height: 67px;
+	border: 2px solid #aaa9a9;
+	border-radius: 50%;
+	font-size: 40px;
+  text-align: center;
+  line-height: 60px;
+  margin: 0 0 10px 15px;
+}
+/*____________________________________________*/
