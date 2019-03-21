@@ -19,41 +19,70 @@ get_header();
             <div class="container">
                 <div class="row">
                     <p class="col-12">Наша ремонтно-строительная компания обладает богатым опытом и высоким профессионализмом в области общестроительных, инженерных и отделочных работ. Основной специализацией компании «Голден строй» является реконструкция, ремонт и отделка всех видов коммерческой недвижимости.</p>
-                    <p class="col-md-12 text-center">Мы профессионально выполняем ремонт коммерческих помещенийй в Москве и МО</p>
+                    <p class="col-md-12 text-center my-4">Мы профессионально выполняем ремонт коммерческих помещенийй в Москве и МО</p>
+                    <div class="col-md-6">
+                        <img src="<?php bloginfo('template_url') ?>/images/offices.jpg" alt="">
+                        <h4>Ремонт офисов</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="<?php bloginfo('template_url') ?>/images/shops.jpg" alt="">
+                        <h4>Ремонт магазинов</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="<?php bloginfo('template_url') ?>/images/caffe.jpg" alt="">
+                        <h4>Ремонт кафе и ресторанов</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="<?php bloginfo('template_url') ?>/images/business.jpg" alt="">
+                        <h4>Ремонт торговых центров</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="<?php bloginfo('template_url') ?>/images/banks.jpg" alt="">
+                        <h4>Ремонт банков</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="<?php bloginfo('template_url') ?>/images/hotels.jpg" alt="">
+                        <h4>Ремонт гостиниц и отелей</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="<?php bloginfo('template_url') ?>/images/beauty.jpg" alt="">
+                        <h4>Ремонт салонов красоты <br>и фитнес клубов</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="<?php bloginfo('template_url') ?>/images/med.jpg" alt="">
+                        <h4>Ремонт медицинских <br>центров и детских садов</h4>
+                    </div>
+
                 </div>
             </div>
-    		
-    	</section>
-    	<section class="about">
-    		
-    	</section>
-    	<section class="application">
-    		
-    	</section>
+      	</section>
     	<section class="about">
             <div class="container">
                 <div class="row">
                     <h3 class="col-12 my-3">О компании</h3>
-                    <div class="col-md-6">
+                    <div class="col-md-6 about__text">
                         <p>На протяжении более 5 лет мы занимаемся ремонтными работами коммерческих помещений под ключ. Наши профессионалы берутся за работу любой сложности, от обычного ремонта до капитального, от простой отделки помещений до элитных проектов с тщательной разработкой уникального дизайна. Для “Голден строй” нет невыполнимых решений - мы найдём способ воплотить ваш проект в жизнь и провести ремонт коммерческой недвижимости согласно всем указанным пожеланиям.</p>
                         <p>Мы прекрасно понимаем, что репутация - наиболее ценный из наших активов, и стараемся соответствовать самым высоким требованиям, предъявленными заказчиками к строительным компаниям.</p>
                         <p>Мы дорожим своими партнерами, от крупных игроков рынка коммерческой недвижимости до арендаторов малых помещений. Поэтому мы всегда стремимся к долгосрочным отношениям. Мы будем рады видеть вас в числе своих постоянных заказчиков и постараемся оправдать ваше доверие.</p>
 
                     </div>
                     <div class="col-md-6">
-                        
+                        <?php echo do_shortcode('[video mp4="http://goldenbuild/wp-content/uploads/2019/03/Презентация-оплачено.mp4"][/video]'); ?>
+                        <p class="work-years work-years-number">5</p><p class="work-years">лет<br> работы</p>
                     </div>
                 </div>
             </div>
     	</section>
-    	<section class="form form-section">
+    	<section class="form form-section form-section--first">
     		<div class="container">
     			<div class="row">
-    				<div class="col-md-6">
-    					
+    				<div class="col-md-4 pr-0 d-flex">
+                        <div class="form__wrap">
+                            <?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]'); ?>
+                        </div>
     				</div>
-    				<div class="col-md-6">
-    					форма
+    				<div class="col-md-8 form-image pl-0">
+                        <img src="<?php bloginfo('template_url') ?>/images/form-photo.png" alt="" class="form__image">
     				</div>
     			</div>
     		</div>
@@ -203,14 +232,16 @@ get_header();
 	    		</div>
     		</div>
     	</section>
-    	<section class="form form-section">
+    	<section class="form form-section form-section--first">
     		<div class="container">
     			<div class="row">
     				<div class="col-md-6">
-    					
+                        <div class="form__wrap">
+                            <?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]'); ?>
+                        </div>
     				</div>
     				<div class="col-md-6">
-    					форма
+                        <img src="<?php bloginfo('template_url') ?>/images/form-photo2.png" alt="" class="form__image">
     				</div>
     			</div>
     		</div>
@@ -220,39 +251,48 @@ get_header();
                 <h3 class="col-12">Схема сотрудничества</h3>
     			<div class="col-md-4 text-center">
     				<img src="<?php bloginfo('template_url') ?>/images/scheme1.png" alt="">
-    				<p>Звонок/заявка</p>
+    				<p>
+                        <span>1</span>Звонок/заявка</p>
     		    </div>
     			<div class="col-md-4 text-center">
     				<img src="<?php bloginfo('template_url') ?>/images/scheme2.png" alt="">
-    				<p>Бесплатный выезд<br> специалиста на объект</p>
+    				<p>
+                        <span>2</span>Бесплатный выезд<br> специалиста на объект</p>
     		    </div>
     			<div class="col-md-4 text-center">
     				<img src="<?php bloginfo('template_url') ?>/images/scheme3.png" alt="">
-    				<p>Выполнение<br> обмерных работ</p>
+    				<p>
+                        <span>3</span>Выполнение<br> обмерных работ</p>
     		    </div>
     			<div class="col-md-4 text-center">
     				<img src="<?php bloginfo('template_url') ?>/images/scheme4.png" alt="">
-    				<p>Составление сметы<br> и коммерческого<br> предложения</p>
+    				<p>
+                        <span>4</span>Составление сметы<br> и коммерческого<br> предложения</p>
     		    </div>
     			<div class="col-md-4 text-center">
     				<img src="<?php bloginfo('template_url') ?>/images/scheme5.png" alt="">
-    				<p>Подписание<br> официального договора</p>
+    				<p>
+                        <span>5</span>Подписание<br> официального договора</p>
     		    </div>
     			<div class="col-md-4 text-center">
     				<img src="<?php bloginfo('template_url') ?>/images/scheme6.png" alt="">
-    				<p>Выполнение<br> строительно-монтажных<br> работ</p>
+    				<p>
+                        <span>6</span>Выполнение<br> строительно-монтажных<br> работ</p>
     		    </div>
     			<div class="col-md-4 text-center">
     				<img src="<?php bloginfo('template_url') ?>/images/scheme7.png" alt="">
-    				<p>Комплектация мебелью<br> и оборудованием</p>
+    				<p>
+                        <span>7</span>Комплектация мебелью<br> и оборудованием</p>
     		    </div>
     			<div class="col-md-4 text-center">
     				<img src="<?php bloginfo('template_url') ?>/images/scheme8.png" alt="">
-    				<p>Уборка после<br> выполненных работ</p>
+    				<p>
+                        <span>8</span>Уборка после<br> выполненных работ</p>
     		    </div>
     			<div class="col-md-4 text-center">
     				<img src="<?php bloginfo('template_url') ?>/images/scheme9.png" alt="">
-    				<p>Сдача<br> объекта</p>
+    				<p>
+                        <span>9</span>Сдача<br> объекта</p>
     			</div>
     		</div>
     	</section>
@@ -288,7 +328,9 @@ get_header();
     					<p>Возможно сможем уменьшить стоимость. Аргументируем на чем можно сэкономить и какие позиция выше рыночной стоимости.</p>
     				</div>
     				<div class="col-md-6">
-    					форма
+                        <div class="form__wrap">
+                            <?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]'); ?>
+                        </div>
     				</div>
     			</div>
     		</div>

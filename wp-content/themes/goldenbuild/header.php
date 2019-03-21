@@ -13,31 +13,35 @@
     <header>
         <div class="container">
             <div class="row">
-                <img src="" alt="logo goldenbuild">
-                <a href="emailto:">golden.stroy@mail.ru</a>
-                <a href="tel:74956422334">+7 (495)-642-23-34</a>
-                <button>Заказать звонок</button>
+                <div class="col-md-4 header__logo">
+                    <img src="<?php bloginfo('template_url') ?>/images/logo.jpg" alt="logo goldenbuild">
+                </div>
+                <div class="col-md-8 text-right my-3 header__contacts">
+                    <a href="emailto:golden.stroy@mail.ru">golden.stroy@mail.ru</a>
+                    <a href="tel:74956422334">+7 (495)-642-23-34</a>
+                    <button class="header__makeorder">Заказать звонок</button>
+                </div>
             </div>
             <div class="row">
-                <nav class="navbar navbar-expand-md navbar-dark">
+                <nav class="navbar navbar-expand-md col-12">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
+                        <ul class="navbar-nav w-100">
+                            <li class="nav-item col-2">
                                 <a class="nav-link" href="#">Главная</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item col-2">
                                 <a class="nav-link" href="#">Услуги</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item col-3">
                                 <a class="nav-link" href="#">Прайс-листы</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item col-2">
                                 <a class="nav-link" href="#">Вакансии</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item col-2">
                                 <a class="nav-link" href="#">Контакты</a>
                             </li>
                         </ul>
@@ -45,37 +49,41 @@
                 </nav>
             </div>
             <div class="row">
-                <div class="col-md-8 row">
-                    <h1 class="col-12">Ремонт всех видов коммерческих <br>помещений с гарантией под ключ!</h1>
-                    <div class="col-md-3">
-                        <img src="" alt="">
-                        <h4>Гарантия до 5 лет </h4>
+                <div class="col-md-8 row header__properties">
+                    <h1 class="col-12 header__heading">Ремонт всех видов коммерческих <br>помещений с гарантией под ключ!</h1>
+                    <div class="col-md-3 header__properties__item">
+                        <img src="<?php bloginfo('template_url') ?>/images/warranty.png" alt="">
+                        <h4>Гарантия<br> до 5 лет </h4>
                         <p>предоставляем расширенную гарантию на работы</p>
                     </div>
-                    <div class="col-md-3">
-                        <img src="" alt="">
-                        <h4>Быстро и в срок </h4>
+                    <div class="col-md-3 header__properties__item">
+                        <img src="<?php bloginfo('template_url') ?>/images/terms.png" alt="">
+                        <h4>Быстро и<br> в срок </h4>
                         <p>все работы выполняются не только качественно, но и в срок</p>
                     </div>
-                    <div class="col-md-3">
-                        <img src="" alt="">
-                        <h4>Оплата любым удобным способом </h4>
+                    <div class="col-md-3 header__properties__item">
+                        <img src="<?php bloginfo('template_url') ?>/images/payment.png" alt="">
+                        <h4>Оплата любым<br> удобным способом </h4>
                         <p>безналичным и наличным путем</p>
                     </div>
-                    <div class="col-md-3">
-                        <img src="" alt="">
-                        <h4>Официальный договор</h4>
+                    <div class="col-md-3 header__properties__item">
+                        <img src="<?php bloginfo('template_url') ?>/images/agreement.png" alt="">
+                        <h4>Официальный<br> договор</h4>
                         <p>все обязательства фиксируются в договоре</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <form action="">
-                        <h3>Оставьте заявку прямо сейчас и получите смету под ваш бюджет</h3>
-                        <input type="text" placeholder="+7 (___) ___-__-__">
-                        <input type="submit" value="Получить смету">
-                        <input type="checkbox" id="agree">
-                        <label for="agree">Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности.</label>
-                    </form>
+                   <div class="form__wrap">
+                       <?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]'); ?>
+                   </div>
+
+<!--                    <form action="">-->
+<!--                        <h3>Оставьте заявку прямо сейчас и получите смету под ваш бюджет</h3>-->
+<!--                        <input type="text" placeholder="+7 (___) ___-__-__">-->
+<!--                        <input type="submit" value="Получить смету">-->
+<!--                        <input type="checkbox" id="agree">-->
+<!--                        <label for="agree">Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности.</label>-->
+<!--                    </form>-->
                 </div>
             </div>
         </div>
