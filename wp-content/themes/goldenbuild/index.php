@@ -67,7 +67,7 @@ get_header();
 
                     </div>
                     <div class="col-md-6">
-                        <?php echo do_shortcode('[video mp4="http://goldenbuild/wp-content/uploads/2019/03/Презентация-оплачено.mp4"][/video]'); ?>
+                        <?php echo do_shortcode('[video mp4="http://goldenbuild/wp-content/uploads/2019/03/presentation-1.mp4"][/video]'); ?>
                         <p class="work-years work-years-number">5</p><p class="work-years">лет<br> работы</p>
                     </div>
                 </div>
@@ -76,12 +76,12 @@ get_header();
     	<section class="form form-section form-section--first">
     		<div class="container">
     			<div class="row">
-    				<div class="col-md-4 pr-0 d-flex">
+    				<div class="col-12 col-lg-4 pr-0 d-flex">
                         <div class="form__wrap">
                             <?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]'); ?>
                         </div>
     				</div>
-    				<div class="col-md-8 form-image pl-0">
+    				<div class="col-lg-8 d-none d-lg-block form-image pl-0">
                         <img src="<?php bloginfo('template_url') ?>/images/form-photo.png" alt="" class="form__image">
     				</div>
     			</div>
@@ -158,22 +158,27 @@ get_header();
     		<div class="container">
     			<div class="row">
 		    		<h3 class="col-12">Наши дополнительные услуги</h3>
-		    		<div class="col-md-6 services__item my-3">
-		    			<img src="<?php bloginfo('template_url') ?>/images/build.jpg" alt="">
-		    			<p class="mx-3 text-center">Общестроительные работы</p>
-		    		</div>
-		    		<div class="col-md-6 services__item my-3">
-		    			<img src="<?php bloginfo('template_url') ?>/images/facade.jpg" alt="">
-		    			<p class="mx-3 text-center">Фасадные работы</p>
-		    		</div>
-		    		<div class="col-md-6 services__item my-3">
-		    			<img src="<?php bloginfo('template_url') ?>/images/roofing.jpg" alt="">
-		    			<p class="mx-3 text-center">Кровельные работы</p>
-		    		</div>
-		    		<div class="col-md-6 services__item my-3">
-		    			<img src="<?php bloginfo('template_url') ?>/images/design.jpg" alt="">
-		    			<p class="mx-3 text-center">Дизайн интерьеров и проектирование</p>
-		    		</div>
+                        <?php
+                        $query = new WP_Query( array( 'category_name' => 'additional-services' ) );
+                        while ( $query->have_posts() ) { $query->the_post(); ?>
+                            <div class="col-md-6 services__item my-3">
+<!--                                <img src="--><?php //bloginfo('template_url') ?><!--/images/build.jpg" alt="">-->
+                                <?php the_post_thumbnail(); ?>
+                                <p class="mx-3 text-center"><a href="<?php echo get_page_link( 11 ); ?>"> <?php the_title(); ?> </a></p>
+                            </div>
+<!--                            <div class="col-md-6 services__item my-3">-->
+<!--                                <img src="--><?php //bloginfo('template_url') ?><!--/images/facade.jpg" alt="">-->
+<!--                                <p class="mx-3 text-center">Фасадные работы</p>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-6 services__item my-3">-->
+<!--                                <img src="--><?php //bloginfo('template_url') ?><!--/images/roofing.jpg" alt="">-->
+<!--                                <p class="mx-3 text-center">Кровельные работы</p>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-6 services__item my-3">-->
+<!--                                <img src="--><?php //bloginfo('template_url') ?><!--/images/design.jpg" alt="">-->
+<!--                                <p class="mx-3 text-center">Дизайн интерьеров и проектирование</p>-->
+<!--                            </div>-->
+                        <?php } ?>
     			</div>
     		</div>
     	</section>
@@ -235,12 +240,12 @@ get_header();
     	<section class="form form-section form-section--first">
     		<div class="container">
     			<div class="row">
-    				<div class="col-md-6">
+    				<div class="col-12 col-lg-6">
                         <div class="form__wrap">
                             <?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]'); ?>
                         </div>
     				</div>
-    				<div class="col-md-6">
+    				<div class="col-lg-6 d-none d-lg-block">
                         <img src="<?php bloginfo('template_url') ?>/images/form-photo2.png" alt="" class="form__image">
     				</div>
     			</div>
@@ -318,17 +323,18 @@ get_header();
             </div>
     		
     	</section>
-    	<section class="form-section">
+    	<section class="form-section form-section--padding">
     		<div class="container">
     			<div class="row">
-    				<div class="col-md-6">
+    				<div class="col-lg-7">
     					<p>Есть смета конкурентов?</p>
     					<p>Вам уже составили смету в другой компании?</p>
     					<p>Отправьте её нам, мы проверим цены и ошибки в расчетах.</p>
     					<p>Возможно сможем уменьшить стоимость. Аргументируем на чем можно сэкономить и какие позиция выше рыночной стоимости.</p>
     				</div>
-    				<div class="col-md-6">
+    				<div class="col-lg-5">
                         <div class="form__wrap">
+                            <img src="<?php bloginfo('template_url') ?>/images/form-photo3.png" alt="" class="form__image">
                             <?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]'); ?>
                         </div>
     				</div>

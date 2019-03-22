@@ -1,9 +1,9 @@
-[Wed Mar 20 2019 11:32:53 GMT+0200 (FLE Standard Time)] layer " +7 (495)-642-23-34": Expected Either a default asset specification or a layer asset specification but " " found.
-[Wed Mar 20 2019 11:32:53 GMT+0200 (FLE Standard Time)] layer " golden.stroy@mail.ru": Unsupported extension: ru
-[Wed Mar 20 2019 11:32:53 GMT+0200 (FLE Standard Time)] layer "+7 (___) ___-__-__": Expected Either a default asset specification or a layer asset specification but "+" found.
-[Wed Mar 20 2019 11:32:53 GMT+0200 (FLE Standard Time)] layer "+7 (___) ___-__-__": Expected Either a default asset specification or a layer asset specification but "+" found.
-[Wed Mar 20 2019 11:32:53 GMT+0200 (FLE Standard Time)] layer "+7 (___) ___-__-__": Expected Either a default asset specification or a layer asset specification but "+" found.
-[Wed Mar 20 2019 11:32:53 GMT+0200 (FLE Standard Time)] layer "+7 (___) ___-__-__": Expected Either a default asset specification or a layer asset specification but "+" found.
-[Wed Mar 20 2019 11:32:53 GMT+0200 (FLE Standard Time)] layer " +7 (495)-642-23-34": Expected Either a default asset specification or a layer asset specification but " " found.
-[Wed Mar 20 2019 11:32:53 GMT+0200 (FLE Standard Time)] layer " golden.stroy@mail.ru": Unsupported extension: ru
-[Wed Mar 20 2019 11:32:53 GMT+0200 (FLE Standard Time)] layer "social_icons_v2_graphicsland.ru-5-700x578": Expected end of input but "-" found.
+[Thu Mar 21 2019 17:03:17 GMT+0200 (FLE Standard Time)] layer " +7 (495)-642-23-34": Expected Either a default asset specification or a layer asset specification but " " found.
+[Thu Mar 21 2019 17:03:17 GMT+0200 (FLE Standard Time)] layer " golden.stroy@mail.ru": Unsupported extension: ru
+[Thu Mar 21 2019 17:03:17 GMT+0200 (FLE Standard Time)] layer "+7 (___) ___-__-__": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Thu Mar 21 2019 17:03:17 GMT+0200 (FLE Standard Time)] layer "+7 (___) ___-__-__": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Thu Mar 21 2019 17:03:17 GMT+0200 (FLE Standard Time)] layer "+7 (___) ___-__-__": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Thu Mar 21 2019 17:03:17 GMT+0200 (FLE Standard Time)] layer "+7 (___) ___-__-__": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Thu Mar 21 2019 17:03:17 GMT+0200 (FLE Standard Time)] layer " +7 (495)-642-23-34": Expected Either a default asset specification or a layer asset specification but " " found.
+[Thu Mar 21 2019 17:03:17 GMT+0200 (FLE Standard Time)] layer " golden.stroy@mail.ru": Unsupported extension: ru
+[Thu Mar 21 2019 17:03:17 GMT+0200 (FLE Standard Time)] layer "social_icons_v2_graphicsland.ru-5-700x578": Expected end of input but "-" found.
