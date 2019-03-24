@@ -6,7 +6,8 @@ Author URI: -
 Description: Description
  */
 
- /* reset */
+/* reset
+ _____________________________________________*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -79,89 +80,83 @@ footer {
     flex: 0 0  auto;
 }
 
-/*________________________ header section ___________________________________*/
+/* HEADER styles
+______________________________________ */
 header {
 	background: url(images/header-bg.jpg) no-repeat center;
 	background-size: cover;
 	padding: 10px 0 30px;
 	color: #fff;
 }
-.header__logo img {
+.company-logo {
 	max-height: 140px;
 	margin-left: 30px;
 }
-.header__makeorder {
+.company-contacts *{
+	margin-left: 20px;
+	display: inline-block;
+}
+.company-contacts__callrequest {
 	background: #ff0000;
 	border: 2px solid black;
 	padding: 10px 15px;
 	color: #fff;
 	text-transform: uppercase;
 }
-.header__contacts *{
-	margin-left: 20px;
-}
+
 .navbar {
 	margin: 50px 0;
+}
+.navbar-nav {
+	justify-content: space-between;
 }
 .nav-item {
 	text-transform: uppercase;
 	font-size: 24px;
 }
-
-.navbar-nav {
-	justify-content: space-between;
-}
-
 .navbar-dark .navbar-nav .nav-link {
 	color: rgba(255,255,255,1);
 }
-/*.header__heading {*/
-	/*padding-top: 50px;*/
-	/*padding-bottom: 80px;*/
-/*}*/
 
-/*.header__properties__item {*/
-	/*display: flex;*/
-	/*flex-direction: column;*/
-	/*justify-content: space-between;*/
-	/*align-items: center;*/
-/*}*/
-.header__properties img {
+.company-feature {
+	float: left;
+}
+.company-feature__img {
 	height: 130px;
 	max-width: 100%;
 	object-fit: contain;
 }
-.header__properties h4 {
+.company-feature__heading {
 	color: #f5c905;
 	font-size: 18px;
 	font-weight: bold;
 	margin: 25px 0;
 }
-.header__properties p {
+.company-feature__description {
 	font-size: 16px;
 }
-.header__properties__item {
-	float: left;
-}
-/*_______________________________________*/
-.form__wrap {
+
+/* WP CONTACT FORM styles
+ _____________________________*/
+.wp-form__wrap {
 	background-color: #fff;
 	color: #000;
 	padding: 20px;
 	text-align: center;
 	max-width: 410px;
 	margin: 0 auto;
+	border: 1px solid black;
 }
-.form__wrap form {
+.wp-form__wrap form {
 	border: 1px solid #000;
 	padding: 10px;
 }
-.form__wrap h3 {
+.wp-form__wrap h3 {
 	text-transform: none;
 	font-size: 20px;
 }
-.form__wrap input[type="tel"] {
-	background: #fff;
+.wp-form__wrap input[type="tel"] {
+	background: transparent;
 	border: none;
 	outline: none;
 	/*padding: 0;*/
@@ -171,7 +166,7 @@ header {
 	width: 100%;
 	margin: 20px 0;
 }
-.form__wrap input[type="submit"] {
+.wp-form__wrap input[type="submit"] {
 	background: #ff0000;
 	border: none;
 	outline: none;
@@ -181,14 +176,205 @@ header {
 	width: 100%;
 	margin: 20px 0;
 }
-.form__wrap input[disabled] {
+.wp-form__wrap input[disabled] {
 	color: graytext;
 }
-.form__wrap label {
+.wp-form__wrap label {
 	font-size: 14px;
 	font-weight: bold;
 }
-.form__image {
+
+/* SERVICES section styles
+______________________________________*/
+section.services {
+	padding: 50px 0 0;
+	font-size: 24px;
+}
+.services-item__img {
+	width: 100%;
+	height: 350px;
+	object-fit: cover;
+}
+.services-item__heading {
+	font-size: 30px;
+	margin: 40px 0;
+	text-transform: uppercase;
+}
+
+/* ABOUT section styles
+______________________________________*/
+section.about {
+	text-align: justify;
+	padding: 0 0 50px;
+	/*line-height: 1;*/
+}
+.about__description {
+	margin-bottom: 10px;
+}
+.about__working-years {
+	color: #ff0000;
+	font-size: 30px;
+	font-weight: 400;
+	display: inline-block;
+	line-height: 1;
+}
+.about__working-years--number {
+	font-size: 72px;
+}
+
+/*form section*/
+
+/* REPAIRS section styles
+______________________________________*/
+section.repairs {
+	padding: 50px 0;
+}
+.repairs__name {
+	background: #f5c905;
+	padding: 20px;
+	text-align: center;
+	color: #000000;
+	margin-bottom: 10px;
+}
+.repairs__img {
+	width: 100%;
+}
+.repairs__price {
+	font-size: 30px;
+	text-align: center;
+}
+.repairs__price--number {
+	color: #ff0000;
+	font-size: 36px;
+	font-weight: bold;
+}
+.repairs__description {
+	font-size: 22px;
+	color: #484746;
+}
+
+/* ADDITIONAL SERVICES section styles
+__________________________________________*/
+.additional-services {
+	color: #fff;
+	padding: 50px 0;
+	background: url(images/aditionalserv-bg.jpg) no-repeat center;
+	background-size: cover;
+}
+.additional-services img {
+	width: 100%;
+	object-fit: cover;
+}
+.additional-services__item {
+	position: relative;
+}
+.additional-services__heading {
+	position: absolute;
+	font-size: 30px;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+}
+
+/* ADVANTAGES section styles
+__________________________________________*/
+section.advantages {
+	font-size: 24px;
+	padding: 50px 0;
+}
+.advantages__list {
+	list-style: none;
+	margin-top: 80px;
+}
+.advantages__item {
+	margin: 20px 0;
+}
+.advantages__img {
+	width: 100%;
+	height: 245px;
+	display: inline-block;
+	margin: 10px 0;
+	object-fit: cover;
+}
+
+/* BUILDER section styles
+__________________________________________*/
+section.builder {
+	text-align: justify;
+	font-size: 24px;
+	padding: 0 0 50px;
+}
+.builder__heading {
+	margin-bottom: 20px;
+}
+.builder__item {
+	margin: 10px 0;
+}
+
+/*form section*/
+
+/* PARTNERSHIP section styles
+__________________________________________*/
+section.partnership {
+	/*padding: 0 0 50px;*/
+}
+.partnership__heading {
+	margin: 50px 0;
+}
+.partnership__img {
+	height: 150px;
+}
+.partnership__description {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	position: relative;
+}
+.partnership__description--number {
+	display: inline-block;
+	background-color: #f5c905;
+	border: 2px solid black;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 24px;
+	position: absolute;
+	left: 10px;
+	bottom: 40px;
+}
+
+/* WORKEXAMPLES section styles
+__________________________________________*/
+.workexamples__heading {
+	margin: 50px 0;
+}
+.workexamples__link {
+	display: inline-block;
+}
+.workexamples__link img{
+	object-fit: cover;
+	max-width: 100%;
+	height: 200px;
+}
+
+/* REVIEWS section styles
+__________________________________________*/
+section.reviews {
+	padding: 0 0 50px;
+}
+.reviews__heading {
+	margin: 50px 0;
+}
+.reviews__img {
+	width: 100%;
+}
+
+/* FORM section styles
+__________________________________________*/
+.application {
+	background-color: #f5c905;
+}
+.application__image {
 	position: absolute;
 	bottom: 0;
 	height: 100%;
@@ -196,207 +382,32 @@ header {
 	object-fit: cover;
 	object-position: left top;
 }
-.form-section--first .form__wrap {
-	border: 1px solid black;
-}
-/*.form-section--first .form-image {*/
-	/*background: url(images/form-photo.png) no-repeat;*/
-/*}*/
-
-
-/*_______________________________________*/
-.repairs {
-	padding: 50px 0 30px;
-	font-size: 24px;
-}
-.repairs img {
-	width: 100%;
-	height: 407px;
-	object-fit: cover;
-}
-.repairs h4 {
-	font-size: 30px;
-	margin: 40px 0;
-	text-transform: uppercase;
-}
-.repairs p {
-	text-align: justify;
-}
-
-/*_______________________________________*/
-.about {
-	text-align: justify;
-	padding: 0 0 50px;
-	/*line-height: 1;*/
-}
-.about__text p:not(:first-child) {
-	margin-top: 15px;
-}
-
-
-.work-years {
-	color: #ff0000;
-	font-size: 30px;
-	font-weight: 400;
-	display: inline-block;
-	line-height: 1;
-}
-.work-years-number {
-	font-size: 72px;
-}
-/*_______________________________________*/
-
-.repairs-type {
-	padding: 50px 0;
-}
-.repairs-type h4 {
-	background: #f5c905;
-	padding: 20px;
-	text-align: center;
-	color: #000000;
-	margin-bottom: 10px;
-}
-.repairs-type img {
-	width: 100%;
-}
-.repairs-type p {
-	font-size: 30px;
-	text-align: center;
-
-}
-.repairs-type span {
-	color: #ff0000;
-	font-size: 36px;
-	font-weight: bold;
-}
-.repairs-type ul {
-	font-size: 24px;
-	color: #484746;
-}
-/*_______________________________________*/
-
-/*___________ services section___________*/
-.services {
-	color: #fff;
-	padding: 50px 0;
-	background: url(images/aditionalserv-bg.jpg) no-repeat center;
-}
-.services img {
-	width: 100%;
-}
-.services__item {
-	position: relative;
-}
-.services__item p {
-	position: absolute;
-	font-size: 30px;
-	left: 0;
-	right: 0;
-	bottom: 20px;
-}
-/*_______________________________________*/
-
-/*___________ advantages section___________*/
-.advantages {
-	font-size: 24px;
-	padding: 50px 0;
-}
-.advantages ul {
-	list-style: none;
-	margin-top: 80px;
-}
-.advantages li {
-	margin: 20px 0;
-}
-.advantages img {
-	width: 100%;
-	height: 245px;
-	display: inline-block;
-	margin: 10px 0;
-}
-/*_______________________________________*/
-
-/*___________ contractor section___________*/
-.contractor {
-	text-align: justify;
-	font-size: 24px;
-	padding: 0 0 50px;
-}
-.contractor li {
-	margin: 10px 0;
-}
-/*_______________________________________*/
-
-/*___________ scheme section___________*/
-
-.scheme {
-	/*padding: 0 0 50px;*/
-}
-.scheme h3 {
-	margin: 50px 0;
-}
-.scheme p {
-	position: relative;
-}
-.scheme img {
-	height: 215px;
-}
-.scheme span {
-	display: inline-block;
-	background-color: #f5c905;
-	border: 2px solid black;
-	border-radius: 50%;
-	width: 60px;
-	height: 60px;
-	line-height: 60px;
-	font-size: 24px;
-	position: absolute;
-	left: -35px;
-	bottom: 50px;
-}
-/*_______________________________________*/
-.workexamples h3 {
-	margin: 50px 0;
-}
-
-.reviews h3 {
-	margin: 50px 0;
-}
-
-/*_______________________________________*/
-.form-section {
-	background-color: #f5c905;
-}
-.form-section p {
+.application--padding .application__option {
 	color: #050505;
 	font-weight: bold;
 	font-size: 24px;
-	margin: 10px;
+	margin: 15px;
+	width: 66%
+}
+.application--padding {
+	padding: 45px 0;
+}
+.application--padding .application__image {
+	left: -310px;
+	bottom: -45px;
+	max-width: unset;
 }
 
-/*________________additional services page________________*/
-.article img {
-	width: 100%;
-	height: auto;
-}
-.addional-services section {
-	padding: 50px 0;
-}
-/*________________________________________________________*/
-
-.form-section--padding {
-	padding: 50px 0;
-}
-
-/* ______________footer styles________________*/
+/* FOOTER styles
+__________________________________________*/
 footer {
 	background-color: #000;
 	color: #aaa9a9;
 	padding: 25px 0 15px;
-	font-size: 18px;
+	font-size: 16px;
 }
 .footer__contacts {
-	font-size: 30px;
+	font-size: 28px;
 }
 .social-icons a {
 	display: inline-block;
@@ -405,18 +416,50 @@ footer {
 	border: 2px solid #aaa9a9;
 	border-radius: 50%;
 	font-size: 40px;
-  text-align: center;
-  line-height: 60px;
-  margin: 0 0 10px 15px;
+	text-align: center;
+  	line-height: 60px;
+  	margin: 0 0 10px 15px;
 }
-/*____________________________________________*/
+
+/* PAGE 2 - ADDITIONAL SERVICES styles
+__________________________________________*/
+.article img {
+	width: 100%;
+	height: auto;
+}
+.articles {
+	padding: 50px 0;
+}
+.article__heading {
+	margin: 0 0 10px;
+}
+.article__content {
+	margin: 0 0 10px;
+}
+
+/*PORTFOLIO page
+__________________________________________*/
+section.portfolio {
+	padding: 50px 0;
+}
+.wpsisac-slick-slider {
+	margin-top: 50px;
+}
+.portfolio__heading {
+	margin-top: 20px;
+}
 
 
+
+/* MEDIA QUERIES
+__________________________________________*/
 @media screen and (min-width: 576px) and (max-width: 991px) {
-	header .container{
+	header .container,
+	footer .container{
 		max-width: 100%;
 	}
 }
+
 @media screen and (max-width: 991px){
 	.header__heading {
 		padding-bottom: 60px;
@@ -426,10 +469,55 @@ footer {
 	.header__properties {
 		padding-bottom: 60px;
 	}
+
+	section.services {
+		font-size: 20px;
+	}
+	.services-item__heading {
+		font-size: 24px;
+		margin: 20px 0;
+	}
+	.services-item__img {
+		height: 250px;
+	}
+
+	.about__video {
+		position: relative;
+	}
+	.about__video .wp-video {
+		margin: 15px auto;
+	}
+	.about__working-years {
+		position: absolute;
+		top: 20px;
+		right: 50px;
+	}
+	.about__working-years--number {
+		right: 160px;
+	}
+
+	.additional-services img {
+		height: 250px;
+	}
+
+	.partnership__description--number {
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		font-size: 17px;
+		left: -22px;
+	}
+
+	.application--padding .application__option {
+		width: auto;
+	}
 }
 
 @media screen and (max-width: 767px) {
-	.header__logo img {
+	h3 {
+		font-size: 28px;
+	}
+	.company-logo {
 		margin-left: 0;
 		width: 100%;
 		height: auto;
@@ -445,8 +533,154 @@ footer {
 	.navbar-dark .navbar-toggler {
 		border-color: rgba(255,255,255, 1);
 	}
+
+	.about__working-years {
+		font-size: 20px;
+		right: 25px
+	}
+	.about__working-years--number {
+		font-size: 50px;
+		right: 100px;
+	}
+
+	section.advantages {
+		font-size: 20px;
+	}
+	.advantages__list {
+		margin-top: 20px;
+	}
+	.advantages__item {
+		margin: 10px 0;
+		text-align: justify;
+	}
+
+	section.builder {
+		font-size: 20px;
+	}
+
+	.partnership__description--number {
+		left: 0;
+	}
+	.partnership__item:last-child .partnership__description--number {
+		left: 160px;
+	}
+
+	.workexamples__heading,
+	.reviews__heading {
+		margin: 20px 0;
+	}
+
+	.application--padding .application__option {
+		text-align: justify;
+	}
+
+	.footer__contacts {
+		font-size: 24px;
+	}
+	.social-icons a {
+		width: 47px;
+		height: 47px;
+		line-height: 40px;
+		font-size: 20px;
+	}
+	.social-icons a:first-child {
+		margin-left: 0;
+	}
+	.copyright {
+		font-size: 14px;
+	}
 }
 
 @media screen and (max-width: 575px) {
+	.about__working-years {
+		font-size: 14px;
+		right: 20px;
+	}
+	.about__working-years--number {
+		font-size: 34px;
+		right: 70px
+	}
 
+	.partnership__description--number,
+	.partnership__item:last-child .partnership__description--number {
+		left: 20%;
+	}
+
+	.footer__contacts {
+		text-align: center;
+	}
+	.social-icons {
+		text-align: center;
+	}
+	.social-icons a {
+		margin-top: 10px
+	}
+	.social-icons a:first-child {
+		margin-left: 0;
+	}
+	.copyright {
+		text-align: center;
+	}
+}
+@media screen and (max-width: 400px) {
+	.partnership__description--number,
+	.partnership__item:last-child .partnership__description--number {
+		left: 30px;
+	}
+}
+
+
+/* Стили для неактивного модального окна */
+.reviewss__wrap {
+	border: 1px solid #000;
+	padding: 10px;
+}
+.reviewss {
+	background: #fff;
+	left: 50%;
+	margin: -250px 0 0 -40%;
+	position: absolute;
+	top: -50%;
+	width: 80%;
+	color: #000;
+	padding: 20px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+
+/* Активация модального окна в состоянии :target */
+.reviewss:target {
+	position: fixed;
+	top: 50%;
+	transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+}
+
+.reviewss header,
+.reviewss footer {
+	background: #fff;
+	color: #000;
+}
+.reviewss footer {
+	border:none;
+	color: #fff;
+}
+.reviewss section,
+.reviewss header,
+.reviewss footer {
+	padding: 15px;
+	z-index: 200;
+}
+.reviewss h2 {
+	margin: 0;
+}
+.reviewss .btn {
+	background: #ff0000;
+	border: 2px solid black;
+	border-radius: 0;
+	padding: 10px 15px;
+	color: #fff;
+	text-transform: uppercase;
 }
