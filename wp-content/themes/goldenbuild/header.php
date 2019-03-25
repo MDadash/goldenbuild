@@ -17,8 +17,8 @@
                     <a href="<?php echo get_home_url(); ?>"><img src="<?php bloginfo('template_url') ?>/images/logo.jpg" alt="Голден Строй" class="company-logo"></a>
                 </div>
                 <div class="col-9 col-sm-9 text-right my-sm-3 company-contacts">
-                    <a href="emailto:golden.stroy@mail.ru" class="company-contacts__email">golden.stroy@mail.ru</a>
-                    <a href="tel:74956422334" class="company-contacts__phone">+7 (495)-642-23-34</a>
+                    <a href="emailto:<?php echo get_option('email'); ?>" class="company-contacts__email"><?php echo get_option('email'); ?></a>
+                    <a href="tel:<?php echo get_option('my_phone'); ?>" class="company-contacts__phone"><?php echo get_option('my_phone'); ?></a>
                     <button class="company-contacts__callrequest">Заказать звонок</button>
                 </div>
             </div>

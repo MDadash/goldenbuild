@@ -15,16 +15,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-6 footer__contacts">
-                    <a href="tel:74956422334" class="company-contacts__phone">+7 (495)-642-23-34</a>
+                    <a href="tel:<?php echo get_option('my_phone'); ?>" class="company-contacts__phone"><?php echo get_option('my_phone'); ?></a>
                     <br>
-                    <a href="emailto:golden.stroy@mail.ru" class="company-contacts__email">golden.stroy@mail.ru</a>
+                    <a href="emailto:<?php echo get_option('email'); ?>" class="company-contacts__email"><?php echo get_option('email'); ?></a>
                 </div>
                 <div class="col-12 col-sm-6 text-right">
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-                        <a href="https://twitter.com/" class="fab fa-twitter"></a>
-                        <a href="https://plus.google.com/" class="fab fa-google-plus"></a>
-                        <a href="https://instagram.com/" class="fab fa-instagram"></a>
+                        <a href="<?php echo get_option('fb_link'); ?>" target="_blank" class="fab fa-facebook-f"></a>
+                        <a href="<?php echo get_option('tw_link'); ?>" target="_blank" class="fab fa-twitter"></a>
+                        <a href="<?php echo get_option('gplus_link'); ?>" target="_blank" class="fab fa-google-plus"></a>
+                        <a href="<?php echo get_option('in_link'); ?>" target="_blank" class="fab fa-instagram"></a>
                     </div>
                     <div class="copyright">
                         <p>© 2018, ООО "ГОЛДЕН СТРОЙ"</p>
