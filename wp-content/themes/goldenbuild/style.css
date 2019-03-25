@@ -274,8 +274,6 @@ section.about {
 	font-size: 72px;
 }
 
-/*form section*/
-
 /* REPAIRS section styles
 ______________________________________*/
 section.repairs {
@@ -367,8 +365,6 @@ section.builder {
 .builder__item {
 	margin: 10px 0;
 }
-
-/*form section*/
 
 /* PARTNERSHIP section styles
 __________________________________________*/
@@ -495,6 +491,49 @@ footer {
 	border: 2px solid #f5c905;
 }
 
+/* MODAL WINDOW for reviews*/
+.modal-dialog {
+	max-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: 300;
+
+	background: #fff;
+	border: 1px solid #000;
+	padding: 10px;
+}
+.modal-content {
+	color: #000;
+	padding: 20px;
+	text-align: justify;
+	border: 1px solid black;
+	background: #fff;
+	border-radius: 0;
+}
+.modal-review__author {
+	text-align: right;
+	font-weight: 500;
+}
+.modal-title {
+	text-align: center;
+}
+.modal__close {
+	background: #ff0000;
+	border: 2px solid black;
+	border-radius: 0;
+	padding: 10px 15px;
+	color: #fff;
+	text-transform: uppercase;
+	margin: 0 auto;
+}
+.modal__close:hover,
+.modal__close:focus,
+.modal__close:active {
+	outline: none;
+	background: #f1c425;
+	color: #000;
+}
+
 /* PAGE 2 - ADDITIONAL SERVICES styles
 __________________________________________*/
 .article img {
@@ -522,8 +561,6 @@ section.portfolio {
 .portfolio__heading {
 	margin-top: 20px;
 }
-
-
 
 /* MEDIA QUERIES
 __________________________________________*/
@@ -701,48 +738,4 @@ __________________________________________*/
 	.partnership__item:last-child .partnership__description--number {
 		left: 30px;
 	}
-}
-
-
-/* MODAL WINDOW for reviews*/
-.modal-dialog {
-	max-width: 450px;
-	margin-left: auto;
-	margin-right: auto;
-	font-weight: 300;
-
-	background: #fff;
-	border: 1px solid #000;
-	padding: 10px;
-}
-.modal-content {
-	color: #000;
-	padding: 20px;
-	text-align: justify;
-	border: 1px solid black;
-	background: #fff;
-	border-radius: 0;
-}
-.modal-review__author {
-	text-align: right;
-	font-weight: 500;
-}
-.modal-title {
-	text-align: center;
-}
-.modal__close {
-	background: #ff0000;
-	border: 2px solid black;
-	border-radius: 0;
-	padding: 10px 15px;
-	color: #fff;
-	text-transform: uppercase;
-	margin: 0 auto;
-}
-.modal__close:hover,
-.modal__close:focus,
-.modal__close:active {
-	outline: none;
-	background: #f1c425;
-	color: #000;
 }

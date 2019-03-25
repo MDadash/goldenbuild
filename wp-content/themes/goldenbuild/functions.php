@@ -7,13 +7,14 @@ function theme_name_scripts() {
         
     wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-3.3.1.min.js');
     wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js');
+    wp_enqueue_script('jquery-mask', get_template_directory_uri() . '/js/jquery.mask.js');
     wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js');
 }
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 
 register_nav_menus(array(
-  'navbar'    => 'Верхнее меню',    //Название месторасположения меню в шаблоне
-  'bottom' => 'Нижнее меню'      //Название другого месторасположения меню в шаблоне
+  'navbar'    => 'Верхнее меню',
+  'bottom' => 'Нижнее меню'
 ));
 /*Register menu*/
 
@@ -24,7 +25,7 @@ function add_menu_atts( $atts, $item, $args ) {
 
 add_filter( 'nav_menu_link_attributes', 'add_menu_atts', 10, 3 );
 
-//телефон
+//Phonenumber
 function my_more_options(){
     add_settings_field('phone','Телефон','display_phone','general');
     register_setting('general','my_phone');
@@ -33,7 +34,7 @@ add_action('admin_init','my_more_options');
 function display_phone(){
     echo "<input type='text' name='my_phone' value='".esc_attr(get_option('my_phone'))."'>";
 }
-//Second телефон
+//Second phonenumber
 function my_more_sp_options(){
     add_settings_field('second_phone','Телефон #2','display_second_phone','general');
     register_setting('general','my_second_phone');
@@ -42,7 +43,7 @@ add_action('admin_init','my_more_sp_options');
 function display_second_phone(){
     echo "<input type='text' name='my_second_phone' value='".esc_attr(get_option('my_second_phone'))."'>";
 }
-//фейсбук
+//Facebook
 function my_fb_link_options(){
     add_settings_field('fb_link','Ссылка на фэйсбук','display_fb_link','general');
     register_setting('general','fb_link');
@@ -51,7 +52,7 @@ add_action('admin_init','my_fb_link_options');
 function display_fb_link(){
     echo "<input type='text' name='fb_link' value='".esc_attr(get_option('fb_link'))."'>";
 }
-//Твиттер
+//Twitter
 function my_tw_link_options(){
     add_settings_field('tw_link','Ссылка на твиттер','display_tw_link','general');
     register_setting('general','tw_link');
@@ -60,7 +61,7 @@ add_action('admin_init','my_tw_link_options');
 function display_tw_link(){
     echo "<input type='text' name='tw_link' value='".esc_attr(get_option('tw_link'))."'>";
 }
-//Инстаграм
+//Instagram
 function my_in_link_options(){
     add_settings_field('in_link','Ссылка на инстаграмм','display_in_link','general');
     register_setting('general','in_link');
@@ -98,19 +99,6 @@ function do_excerpt($string, $word_limit) {
   array_pop($words);
   echo implode(' ', $words).'';
 }
-
-/**вывод страниц отдельными постами **/
-        // add_filter('single_template', 'check_for_category_single_template');
-        // function check_for_category_single_template( $t ){
-        //     foreach( (array) get_the_category() as $cat ){
-        //         if ( file_exists(TEMPLATEPATH . "/single-category-{$cat->slug}.php") ) return TEMPLATEPATH . "/single-category-{$cat->slug}.php";
-        //         if($cat->parent){
-        //             $cat = get_the_category_by_ID( $cat->parent );
-        //             if ( file_exists(TEMPLATEPATH . "/single-category-{$cat->slug}.php") ) return TEMPLATEPATH . "/single-category-{$cat->slug}.php";
-        //         }
-        //     }
-        //     return $t;
-        // }
 
 remove_filter( 'the_content', 'wpautop' );
 

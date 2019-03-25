@@ -20,9 +20,4 @@ Template Post Type: post
         </div>
     </section>
 </main>
-
-<!--<main>-->
-<!--    --><?php //echo do_shortcode('[slick-carousel-slider slick-carousel-slider category="4" design="design-6" slidestoshow="6" autoplay="true"]'); ?>
-<!--</main>-->
-
 <?php get_footer(); ?>
