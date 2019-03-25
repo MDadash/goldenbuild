@@ -103,6 +103,13 @@ header {
 	color: #fff;
 	text-transform: uppercase;
 }
+.company-contacts__callrequest:hover,
+.company-contacts__callrequest:focus,
+.company-contacts__callrequest:active {
+	outline: none;
+	background: #f1c425;
+	color: #000;
+}
 
 .navbar {
 	margin: 50px 0;
@@ -116,6 +123,10 @@ header {
 }
 .navbar-dark .navbar-nav .nav-link {
 	color: rgba(255,255,255,1);
+}
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+	color: #f5c905;
 }
 
 .company-feature {
@@ -136,6 +147,14 @@ header {
 	font-size: 16px;
 }
 
+.company-contacts__email:hover,
+.company-contacts__phone:hover,
+.company-contacts__email:focus,
+.company-contacts__phone:focus,
+.company-contacts__email:active,
+.company-contacts__phone:active {
+	color: #f5c905;
+}
 /* WP CONTACT FORM styles
  _____________________________*/
 .wp-form__wrap {
@@ -174,14 +193,47 @@ header {
 	color: #fff;
 	font-size: 24px;
 	width: 100%;
-	margin: 20px 0;
+	margin: 20px 0 5px;
+}
+.wp-form__wrap input[type="submit"]:not([disabled]):hover,
+.wp-form__wrap input[type="submit"]:not([disabled]):focus,
+.wp-form__wrap input[type="submit"]:not([disabled]):active {
+	outline: none;
+	background: #f1c425;
+	color: #000;
 }
 .wp-form__wrap input[disabled] {
 	color: graytext;
 }
 .wp-form__wrap label {
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: bold;
+	margin-bottom: 30px;
+}
+.wpcf7-form-control-wrap.tel-394 {
+	position: relative;
+}
+.wpcf7-not-valid-tip {
+	position: absolute;
+	bottom: -23px;
+	width: 100%;
+	font-size: 12px !important;
+}
+.wpcf7-form {
+	position: relative;
+}
+.wpcf7-response-output.wpcf7-validation-errors,
+.wpcf7-response-output.wpcf7-mail-sent-ok {
+	position: absolute;
+	bottom: -11px;
+	font-size: 12px;
+	border: none;
+}
+.wpcf7-response-output.wpcf7-validation-errors {
+	color: red;
+}
+.wpcf7-response-output.wpcf7-mail-sent-ok {
+	color: green;
 }
 
 /* SERVICES section styles
@@ -190,7 +242,7 @@ section.services {
 	padding: 50px 0 0;
 	font-size: 24px;
 }
-.services-item__img {
+.services-item img {
 	width: 100%;
 	height: 350px;
 	object-fit: cover;
@@ -208,7 +260,7 @@ section.about {
 	padding: 0 0 50px;
 	/*line-height: 1;*/
 }
-.about__description {
+.about__description p {
 	margin-bottom: 10px;
 }
 .about__working-years {
@@ -236,7 +288,7 @@ section.repairs {
 	color: #000000;
 	margin-bottom: 10px;
 }
-.repairs__img {
+.repairs__img img{
 	width: 100%;
 }
 .repairs__price {
@@ -248,7 +300,7 @@ section.repairs {
 	font-size: 36px;
 	font-weight: bold;
 }
-.repairs__description {
+.repairs__description ul {
 	font-size: 22px;
 	color: #484746;
 }
@@ -275,6 +327,11 @@ __________________________________________*/
 	right: 0;
 	bottom: 20px;
 }
+.additional-services__heading:hover,
+.additional-services__heading:focus {
+	color: #f5c905;
+	text-shadow: 0 0 15px #000;
+}
 
 /* ADVANTAGES section styles
 __________________________________________*/
@@ -282,11 +339,11 @@ section.advantages {
 	font-size: 24px;
 	padding: 50px 0;
 }
-.advantages__list {
+.advantages__description ul {
 	list-style: none;
 	margin-top: 80px;
 }
-.advantages__item {
+.advantages__description li {
 	margin: 20px 0;
 }
 .advantages__img {
@@ -351,6 +408,10 @@ __________________________________________*/
 .workexamples__link {
 	display: inline-block;
 }
+.workexamples__link:hover img,
+.rewiews__link:hover img {
+	box-shadow: 0 0 1px 1px rgba(0,0,0,1), 0 0 5px 2px rgba(245,201,5,1);
+}
 .workexamples__link img{
 	object-fit: cover;
 	max-width: 100%;
@@ -365,8 +426,15 @@ section.reviews {
 .reviews__heading {
 	margin: 50px 0;
 }
+.rewiews__link {
+  font-size: 11px;
+  color: #6c7581;
+  text-align: center;
+  margin-bottom: 10px;
+}
 .reviews__img {
 	width: 100%;
+  margin-bottom: 10px;
 }
 
 /* FORM section styles
@@ -419,6 +487,12 @@ footer {
 	text-align: center;
   	line-height: 60px;
   	margin: 0 0 10px 15px;
+}
+.social-icons a:hover,
+.social-icons a:focus,
+.social-icons a:active {
+	color: #f5c905;
+	border: 2px solid #f5c905;
 }
 
 /* PAGE 2 - ADDITIONAL SERVICES styles
@@ -477,7 +551,7 @@ __________________________________________*/
 		font-size: 24px;
 		margin: 20px 0;
 	}
-	.services-item__img {
+	.services-item img {
 		height: 250px;
 	}
 
@@ -546,10 +620,10 @@ __________________________________________*/
 	section.advantages {
 		font-size: 20px;
 	}
-	.advantages__list {
+	.advantages__description ul {
 		margin-top: 20px;
 	}
-	.advantages__item {
+	.advantages__description li {
 		margin: 10px 0;
 		text-align: justify;
 	}
@@ -630,57 +704,45 @@ __________________________________________*/
 }
 
 
-/* Стили для неактивного модального окна */
-.reviewss__wrap {
+/* MODAL WINDOW for reviews*/
+.modal-dialog {
+	max-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: 300;
+
+	background: #fff;
 	border: 1px solid #000;
 	padding: 10px;
 }
-.reviewss {
-	background: #fff;
-	left: 50%;
-	margin: -250px 0 0 -40%;
-	position: absolute;
-	top: -50%;
-	width: 80%;
+.modal-content {
 	color: #000;
 	padding: 20px;
-	text-align: center;
+	text-align: justify;
 	border: 1px solid black;
-}
-
-
-/* Активация модального окна в состоянии :target */
-.reviewss:target {
-	position: fixed;
-	top: 50%;
-	transition: all 0.4s ease-in-out;
-	-moz-transition: all 0.4s ease-in-out;
-	-webkit-transition: all 0.4s ease-in-out;
-}
-
-.reviewss header,
-.reviewss footer {
 	background: #fff;
-	color: #000;
+	border-radius: 0;
 }
-.reviewss footer {
-	border:none;
-	color: #fff;
+.modal-review__author {
+	text-align: right;
+	font-weight: 500;
 }
-.reviewss section,
-.reviewss header,
-.reviewss footer {
-	padding: 15px;
-	z-index: 200;
+.modal-title {
+	text-align: center;
 }
-.reviewss h2 {
-	margin: 0;
-}
-.reviewss .btn {
+.modal__close {
 	background: #ff0000;
 	border: 2px solid black;
 	border-radius: 0;
 	padding: 10px 15px;
 	color: #fff;
 	text-transform: uppercase;
+	margin: 0 auto;
+}
+.modal__close:hover,
+.modal__close:focus,
+.modal__close:active {
+	outline: none;
+	background: #f1c425;
+	color: #000;
 }

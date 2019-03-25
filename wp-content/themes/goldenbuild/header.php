@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-3 col-sm-3">
-                    <a href=""><img src="<?php bloginfo('template_url') ?>/images/logo.jpg" alt="Голден Строй" class="company-logo"></a>
+                    <a href="<?php echo get_home_url(); ?>"><img src="<?php bloginfo('template_url') ?>/images/logo.jpg" alt="Голден Строй" class="company-logo"></a>
                 </div>
                 <div class="col-9 col-sm-9 text-right my-sm-3 company-contacts">
                     <a href="emailto:golden.stroy@mail.ru" class="company-contacts__email">golden.stroy@mail.ru</a>
@@ -30,19 +30,19 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav w-100">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Главная</a>
+                                <a class="nav-link" href="<?php echo get_home_url(); ?>">Главная</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Услуги</a>
+                                <a class="nav-link" href="<?php echo get_home_url() . '/#services'; ?>">Услуги</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Прайс-листы</a>
+                                <a class="nav-link" href="<?php echo get_home_url() . '/#repairs'; ?>">Прайс-листы</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Вакансии</a>
+                                <a class="nav-link" href="<?php echo get_home_url() . '/#application'; ?>">Вакансии</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Контакты</a>
+                                <a class="nav-link" href="<?php echo get_home_url() . '/#application-contacts'; ?>">Контакты</a>
                             </li>
                         </ul>
                     </div>

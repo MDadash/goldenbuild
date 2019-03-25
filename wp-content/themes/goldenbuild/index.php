@@ -15,43 +15,21 @@
 get_header();
 ?>
     <main>
-    	<section class="services">
+    	<section class="services" id="services">
             <div class="container">
                 <div class="row">
                     <p class="col-12 text-justify">Наша ремонтно-строительная компания обладает богатым опытом и высоким профессионализмом в области общестроительных, инженерных и отделочных работ. Основной специализацией компании «Голден строй» является реконструкция, ремонт и отделка всех видов коммерческой недвижимости.</p>
                     <p class="col-md-12 text-center my-4">Мы профессионально выполняем ремонт коммерческих помещенийй в Москве и МО</p>
-                    <div class="col-md-6 services-item">
-                        <img src="<?php bloginfo('template_url') ?>/images/offices.jpg" alt="Ремонт офисов" class="services-item__img">
-                        <h4 class="services-item__heading">Ремонт офисов</h4>
-                    </div>
-                    <div class="col-md-6 services-item">
-                        <img src="<?php bloginfo('template_url') ?>/images/shops.jpg" alt="Ремонт магазинов" class="services-item__img">
-                        <h4 class="services-item__heading">Ремонт магазинов</h4>
-                    </div>
-                    <div class="col-md-6 services-item">
-                        <img src="<?php bloginfo('template_url') ?>/images/caffe.jpg" alt="Ремонт кафе и ресторанов" class="services-item__img">
-                        <h4 class="services-item__heading">Ремонт кафе и ресторанов</h4>
-                    </div>
-                    <div class="col-md-6 services-item">
-                        <img src="<?php bloginfo('template_url') ?>/images/business.jpg" alt="Ремонт торговых центров" class="services-item__img">
-                        <h4 class="services-item__heading">Ремонт торговых центров</h4>
-                    </div>
-                    <div class="col-md-6 services-item">
-                        <img src="<?php bloginfo('template_url') ?>/images/banks.jpg" alt="Ремонт банков" class="services-item__img">
-                        <h4 class="services-item__heading">Ремонт банков</h4>
-                    </div>
-                    <div class="col-md-6 services-item">
-                        <img src="<?php bloginfo('template_url') ?>/images/hotels.jpg" alt="Ремонт гостиниц и отелей" class="services-item__img">
-                        <h4 class="services-item__heading">Ремонт гостиниц и отелей</h4>
-                    </div>
-                    <div class="col-md-6 services-item">
-                        <img src="<?php bloginfo('template_url') ?>/images/beauty.jpg" alt="емонт салонов красоты и фитнес клубов" class="services-item__img">
-                        <h4 class="services-item__heading">Ремонт салонов красоты <br>и фитнес клубов</h4>
-                    </div>
-                    <div class="col-md-6 services-item">
-                        <img src="<?php bloginfo('template_url') ?>/images/med.jpg" alt="Ремонт медицинских центров и детских садов" class="services-item__img">
-                        <h4 class="services-item__heading">Ремонт медицинских <br>центров и детских садов</h4>
-                    </div>
+
+                    <?php
+                    $query = new WP_Query( array( 'category_name' => 'services' ) );
+                    while ( $query->have_posts() ) { $query->the_post(); ?>
+                      <div class="col-md-6 services-item">
+                        <?php the_post_thumbnail(); ?>
+                        <h4 class="services-item__heading"><?php the_title(); ?></h4>
+                      </div>
+                    <?php } ?>
+
                 </div>
             </div>
       	</section>
@@ -59,22 +37,23 @@ get_header();
     	<section class="about">
             <div class="container">
                 <div class="row">
-                    <h3 class="col-12 my-3">О компании</h3>
-                    <div class="col-12 col-lg-6">
-                        <p class="about__description">На протяжении более 5 лет мы занимаемся ремонтными работами коммерческих помещений под ключ. Наши профессионалы берутся за работу любой сложности, от обычного ремонта до капитального, от простой отделки помещений до элитных проектов с тщательной разработкой уникального дизайна. Для “Голден строй” нет невыполнимых решений - мы найдём способ воплотить ваш проект в жизнь и провести ремонт коммерческой недвижимости согласно всем указанным пожеланиям.</p>
-                        <p class="about__description">Мы прекрасно понимаем, что репутация - наиболее ценный из наших активов, и стараемся соответствовать самым высоким требованиям, предъявленными заказчиками к строительным компаниям.</p>
-                        <p class="about__description">Мы дорожим своими партнерами, от крупных игроков рынка коммерческой недвижимости до арендаторов малых помещений. Поэтому мы всегда стремимся к долгосрочным отношениям. Мы будем рады видеть вас в числе своих постоянных заказчиков и постараемся оправдать ваше доверие.</p>
+                <?php $the_query = new WP_Query('p=150'); ?>
+                <?php while  ($the_query->have_posts() ) : $the_query->the_post(); ?>
+                    <h3 class="col-12 my-3"><?php the_title(); ?></h3>
+                    <div class="col-12 col-lg-6 about__description">
+                        <?php the_content(); ?>
                     </div>
                     <div class="col-12 col-lg-6 about__video">
                         <?php echo do_shortcode('[video mp4="http://goldenbuild/wp-content/uploads/2019/03/presentation-1.mp4"][/video]'); ?>
                         <p class="about__working-years about__working-years--number">5</p>
                         <p class="about__working-years">лет<br> работы</p>
                     </div>
+                <?php endwhile; ?>
                 </div>
             </div>
     	</section>
 
-    	<section class="application">
+    	<section class="application" id="application">
     		<div class="container">
     			<div class="row">
     				<div class="col-12 col-lg-4 pr-3 pr-lg-0">
@@ -89,71 +68,46 @@ get_header();
     		</div>
     	</section>
 
-    	<section class="repairs">
+    	<section class="repairs" id="repairs">
             <div class="container">
                 <div class="row">
                     <h3 class="col-12 text-center my-3">Вы можете заказать любой вид ремонта</h3>
-                    <div class="col-12 col-lg-6 my-3 repairs__type order-1">
-                        <h4 class="repairs__name">Косметический ремонт</h4>
-                        <img src="<?php bloginfo('template_url') ?>/images/repair.jpg" alt="Косметический ремонт" class="repairs__img">
-                        <p class="repairs__price">от <span class="repairs__price--number">3000</span> руб/м.кв.</p>
-                    </div>
-                    <div class="col-12 col-lg-6 my-3 order-2">
-                        <ul class="repairs__description">
-                            <li>снятие старого настенного покрытия;</li>
-                            <li>шпаклёвка стен, потолков, трещин, неровностей и прочих дефектов;</li>
-                            <li>покраска стен, оклейка обоями от;</li>
-                            <li>монтаж труб отопительных систем;</li>
-                            <li>реставрация внешнего вида отопительных труб;</li>
-                            <li>укладка ламината, паркета, линолеума, ковролина;</li>
-                            <li>обработка и шлифовка паркетных покрытий пола;</li>
-                            <li>установка или замена осветительных приборов;</li>
-                            <li>установка и сборка межкомнатных дверей;</li>
-                            <li>монтаж сантехники.</li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-lg-6 my-3 order-4 order-lg-3">
-                        <ul class="repairs__description">
-                            <li>снятие старого настенного покрытия;</li>
-                            <li>шпаклёвка стен, потолков, трещин, неровностей и прочих дефектов;</li>
-                            <li>выравнивание больших повреждённых настенных участков;</li>
-                            <li>покраска стен, оклейка обоями от;</li>
-                            <li>монтаж труб отопительных систем;</li>
-                            <li>реставрация внешнего вида отопительных труб;</li>
-                            <li>укладка ламината, паркета, линолеума, ковролина;</li>
-                            <li>обработка и шлифовка паркетных покрытий пола;</li>
-                            <li>установка или замена осветительных приборов;</li>
-                            <li>установка и сборка межкомнатных дверей;</li>
-                            <li>монтаж сантехники;</li>
-                            <li>электромонтажные работы.</li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-lg-6 my-3 order-3 order-lg-4">
-                        <h4 class="repairs__name">Капитальный ремонт</h4>
-                        <img src="<?php bloginfo('template_url') ?>/images/repair.jpg" alt="Капитальный ремонт" class="repairs__img">
-                        <p class="repairs__price">от <span class="repairs__price--number">6000</span> руб/м.кв.</p>
-                    </div>
-                    <div class="col-12 col-lg-6 my-3 order-5">
-                        <h4 class="repairs__name">Элитный ремонт</h4>
-                        <img src="<?php bloginfo('template_url') ?>/images/repair.jpg" alt="Элитный ремонт" class="repairs__img">
-                        <p class="repairs__price">от <span class="repairs__price--number">14000</span> руб/м.кв.</p>
-                    </div>
-                    <div class="col-12 col-lg-6 my-3 order-6">
-                        <ul class="repairs__description">
-                            <li>полный спектр ремонтно-отделочных работ "под ключ";</li>
-                            <li>дизайн-проект объекта;</li>
-                            <li>демонтажные работы;</li>
-                            <li>шпаклёвка стен, потолков, трещин, неровностей и прочих дефектов;</li>
-                            <li>выравнивание больших повреждённых настенных участков;</li>
-                            <li>покраска стен, оклейка обоями и т.д.;</li>
-                            <li>монтаж труб отопительных систем;</li>
-                            <li>монтаж напольного покрытия (ламинат, кладка плитки, ковролин, паркет и т.д.);</li>
-                            <li>установка или замена осветительных приборов;</li>
-                            <li>установка и сборка межкомнатных дверей;</li>
-                            <li>монтаж сантехники;</li>
-                            <li>электромонтажные работы.</li>
-                        </ul>
-                    </div>
+
+                    <?php $the_query = new WP_Query('p=136'); ?>
+                    <?php while  ($the_query->have_posts() ) : $the_query->the_post(); ?>
+                        <div class="col-12 col-lg-6 my-3 repairs__type order-1">
+                            <h4 class="repairs__name"><?php the_title(); ?></h4>
+                            <div class="repairs__img"><?php the_post_thumbnail(); ?></div>
+                            <p class="repairs__price">от <span class="repairs__price--number"><?php the_field('price'); ?></span> руб/м.кв.</p>
+                        </div>
+                        <div class="col-12 col-lg-6 my-3 order-2 repairs__description">
+                            <?php the_content(); ?>
+                        </div>
+                    <?php endwhile; ?>
+
+                    <?php $the_query = new WP_Query('p=139'); ?>
+                    <?php while  ($the_query->have_posts() ) : $the_query->the_post(); ?>
+                        <div class="col-12 col-lg-6 my-3 order-4 order-lg-3 repairs__description">
+                            <?php the_content(); ?>
+                        </div>
+                        <div class="col-12 col-lg-6 my-3 order-3 order-lg-4">
+                            <h4 class="repairs__name"><?php the_title(); ?></h4>
+                            <div class="repairs__img"><?php the_post_thumbnail(); ?></div>
+                            <p class="repairs__price">от <span class="repairs__price--number"><?php the_field('price'); ?></span> руб/м.кв.</p>
+                        </div>
+                    <?php endwhile; ?>
+
+                    <?php $the_query = new WP_Query('p=141'); ?>
+                    <?php while  ($the_query->have_posts() ) : $the_query->the_post(); ?>
+                        <div class="col-12 col-lg-6 my-3 order-5">
+                            <h4 class="repairs__name"><?php the_title(); ?></h4>
+                            <div class="repairs__img"><?php the_post_thumbnail(); ?></div>
+                            <p class="repairs__price">от <span class="repairs__price--number"><?php the_field('price'); ?></span> руб/м.кв.</p>
+                        </div>
+                        <div class="col-12 col-lg-6 my-3 order-6 repairs__description">
+                            <?php the_content(); ?>
+                        </div>
+                    <?php endwhile; ?>
                 </div>
             </div>
     	</section>
@@ -177,19 +131,13 @@ get_header();
     	<section class="advantages">
     		<div class="container">
     			<div class="row">
-	    			<div class="col-md-7">
-	    				<h3 class="col-12">Наши преимущества</h3>
-	    				<ul class="advantages__list">
-	    					<li class="advantages__item">- большой стаж работы, опотные и квалифицированные сотрудники</li>
-	    					<li class="advantages__item">- применение передового оборудования в выполнении любых задач</li>
-	    					<li class="advantages__item">- использование современных технологий и регулярная оптимизация рабочего дня позволяет делать всю работу эффективно и качественно</li>
-	    					<li class="advantages__item">- выполнение широкого спектра услуг с различной сложностью</li>
-	    					<li class="advantages__item">- состовление официального договора</li>
-	    					<li class="advantages__item">- гарантия на любую проделаную работу до 5 лет</li>
-	    					<li class="advantages__item">- возможность оплаты любым удобным способом, как безналичным так и наличным путем</li>
-	    					<li class="advantages__item">- все работы осуществляются в срок, согласно графиков выполнения работ</li>
-	    					<li class="advantages__item">- возможность работать в удобное для заказчиков время</li>
-	    				</ul>
+	    			<div class="col-md-7 advantages__description">
+
+                        <?php $the_query = new WP_Query('p=182'); ?>
+                        <?php while  ($the_query->have_posts() ) : $the_query->the_post(); ?>
+                          <h3 class="col-12"><?php the_title(); ?></h3>
+                          <?php the_content(); ?>
+                        <?php endwhile; ?>
 	    			</div>
 	    			<div class="col-md-5">
 	    				<img src="<?php bloginfo('template_url') ?>/images/adv1.jpg" alt="Преимущества компании Голден Строй" class="advantages__img">
@@ -312,29 +260,35 @@ get_header();
             <div class="container">
                 <div class="row">
                     <h3 class="col-12 reviews__heading">Отзывы и благодарности</h3>
-                    <a href="<?php bloginfo('template_url') ?>/docs/letter1.pdf" target="_blank" class="col-6 col-sm-4 col-md-2">
-                        <img src="<?php bloginfo('template_url') ?>/images/reviews1.jpg" alt="Отзывы Голден Строй" class="reviews__img">
+                    <a href="<?php bloginfo('template_url') ?>/docs/letter1.pdf" target="_blank" class="col-6 col-sm-4 col-md-2 rewiews__link">
+                      <img src="<?php bloginfo('template_url') ?>/images/reviews1.jpg" alt="Отзывы Голден Строй" class="reviews__img">
+                      <span class="reviews__author">Генеральный директор ООО "ОптимаСмарт" Журавлев О.И.</span>
                     </a>
-                    <a href="#reviews1" class="col-6 col-sm-4 col-md-2">
-                        <img src="<?php bloginfo('template_url') ?>/images/reviews2.jpg" alt="Отзывы Голден Строй" class="reviews__img">
+                    <a href="#reviews1" class="col-6 col-sm-4 col-md-2 rewiews__link" data-toggle="modal" data-target="#modal-review1">
+                      <img src="<?php bloginfo('template_url') ?>/images/reviews2.jpg" alt="Отзывы Голден Строй" class="reviews__img">
+                      <span class="reviews__author">ООО “Сеть Плюс”</span>
                     </a>
-                    <a href="#reviews2" class="col-6 col-sm-4 col-md-2">
-                        <img src="<?php bloginfo('template_url') ?>/images/reviews3.jpg" alt="Отзывы Голден Строй" class="reviews__img">
+                    <a href="#reviews2" class="col-6 col-sm-4 col-md-2 rewiews__link" data-toggle="modal" data-target="#modal-review2">
+                      <img src="<?php bloginfo('template_url') ?>/images/reviews3.jpg" alt="Отзывы Голден Строй" class="reviews__img">
+                      <span class="reviews__author">ООО “Дионик”</span>
                     </a>
-                    <a href="<?php bloginfo('template_url') ?>/docs/letter2.pdf" target="_blank" class="col-6 col-sm-4 col-md-2">
-                        <img src="<?php bloginfo('template_url') ?>/images/reviews4.jpg" alt="Отзывы Голден Строй" class="reviews__img">
+                    <a href="<?php bloginfo('template_url') ?>/docs/letter2.pdf" target="_blank" class="col-6 col-sm-4 col-md-2 rewiews__link">
+                      <img src="<?php bloginfo('template_url') ?>/images/reviews4.jpg" alt="Отзывы Голден Строй" class="reviews__img">
+                      <span class="reviews__author">Заместитель генерального директора ООО "М-корпорация" А.В.Береснев</span>
                     </a>
-                    <a href="#reviews3" class="col-6 col-sm-4 col-md-2">
-                        <img src="<?php bloginfo('template_url') ?>/images/reviews5.jpg" alt="Отзывы Голден Строй" class="reviews__img">
+                    <a href="#reviews3" class="col-6 col-sm-4 col-md-2 rewiews__link"  data-toggle="modal" data-target="#modal-review3">
+                      <img src="<?php bloginfo('template_url') ?>/images/reviews5.jpg" alt="Отзывы Голден Строй" class="reviews__img">
+                      <span class="reviews__author">ООО “Варис”</span>
                     </a>
-                    <a href="#reviews3" class="col-6 col-sm-4 col-md-2">
-                        <img src="<?php bloginfo('template_url') ?>/images/reviews6.jpg" alt="Отзывы Голден Строй" class="reviews__img">
+                    <a href="#reviews3" class="col-6 col-sm-4 col-md-2 rewiews__link"  data-toggle="modal" data-target="#modal-review1">
+                      <img src="<?php bloginfo('template_url') ?>/images/reviews6.jpg" alt="Отзывы Голден Строй" class="reviews__img">
+                      <span class="reviews__author">ООО “Сеть Плюс”</span>
                     </a>
                 </div>
             </div>
     	</section>
 
-    	<section class="application application--padding">
+    	<section class="application application--padding" id="application-contacts">
     		<div class="container">
     			<div class="row">
     				<div class="col-md-6 col-lg-8">
