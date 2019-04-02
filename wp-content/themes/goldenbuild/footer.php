@@ -27,7 +27,7 @@
                         <a href="<?php echo get_option('in_link'); ?>" target="_blank" class="fab fa-instagram"></a>
                     </div>
                     <div class="copyright">
-                        <p>© 2018, ООО "ГОЛДЕН СТРОЙ"</p>
+                        <p>© 2019, ООО "ГОЛДЕН СТРОЙ"</p>
                         <p>Политика конфиденциальности обрабатываемых данных</p>
                     </div>
                 </div>

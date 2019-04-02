@@ -13,10 +13,10 @@ Template Name: aditionalservices
                     $query = new WP_Query( array( 'category_name' => 'additional-services' ) );
                     while ( $query->have_posts() ) { $query->the_post(); ?>
                         <article class="article row mt-0 mb-0">
-                            <div class="col-12 col-lg-4">
-                                <?php the_post_thumbnail(); ?>
-                            </div>
-                            <div class="col-12 col-lg-8 mt-3 mt-lg-0">
+<!--                            <div class="col-12 col-lg-4">-->
+<!--                                --><?php //the_post_thumbnail(); ?>
+<!--                            </div>-->
+                            <div class="col-12 mt-3 mt-lg-0">
                                 <h3 class="article__heading"><?php the_title(); ?></h3>
                                 <div class="article__content"> <?php the_content(); ?> </div>
                             </div>

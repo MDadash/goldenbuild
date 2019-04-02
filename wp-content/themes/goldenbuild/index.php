@@ -245,7 +245,7 @@ get_header();
     		</div>
     	</section>
 
-    	<section class="workexamples container">
+    	<section class="workexamples container" id="portfolio">
             <div class="row">
                 <h3 class="col-12 workexamples__heading">Выполненные работы</h3>
                 <?php
@@ -258,33 +258,35 @@ get_header();
 
     	<section class="reviews">
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-around">
                     <h3 class="col-12 reviews__heading">Отзывы и благодарности</h3>
-                    <a href="<?php bloginfo('template_url') ?>/docs/letter1.pdf" target="_blank" class="col-6 col-sm-4 col-md-2 rewiews__link">
-                      <img src="<?php bloginfo('template_url') ?>/images/reviews1.jpg" alt="Отзывы Голден Строй" class="reviews__img">
-                      <span class="reviews__author">Генеральный директор ООО "ОптимаСмарт" Журавлев О.И.</span>
-                    </a>
-                    <a href="#reviews1" class="col-6 col-sm-4 col-md-2 rewiews__link" data-toggle="modal" data-target="#modal-review1">
+                    <a href="#reviews1" class="col-6 col-md-2 rewiews__link" data-toggle="modal" data-target="#modal-review1">
                       <img src="<?php bloginfo('template_url') ?>/images/reviews2.jpg" alt="Отзывы Голден Строй" class="reviews__img">
                       <span class="reviews__author">ООО “Сеть Плюс”</span>
                     </a>
-                    <a href="#reviews2" class="col-6 col-sm-4 col-md-2 rewiews__link" data-toggle="modal" data-target="#modal-review2">
+                    <a href="#reviews2" class="col-6 col-md-2 rewiews__link" data-toggle="modal" data-target="#modal-review2">
                       <img src="<?php bloginfo('template_url') ?>/images/reviews3.jpg" alt="Отзывы Голден Строй" class="reviews__img">
                       <span class="reviews__author">ООО “Дионик”</span>
                     </a>
-                    <a href="<?php bloginfo('template_url') ?>/docs/letter2.pdf" target="_blank" class="col-6 col-sm-4 col-md-2 rewiews__link">
-                      <img src="<?php bloginfo('template_url') ?>/images/reviews4.jpg" alt="Отзывы Голден Строй" class="reviews__img">
-                      <span class="reviews__author">Заместитель генерального директора ООО "М-корпорация" А.В.Береснев</span>
-                    </a>
-                    <a href="#reviews3" class="col-6 col-sm-4 col-md-2 rewiews__link"  data-toggle="modal" data-target="#modal-review3">
+                    <a href="#reviews3" class="col-6 col-md-2 rewiews__link"  data-toggle="modal" data-target="#modal-review3">
                       <img src="<?php bloginfo('template_url') ?>/images/reviews5.jpg" alt="Отзывы Голден Строй" class="reviews__img">
                       <span class="reviews__author">ООО “Варис”</span>
                     </a>
-                    <a href="#reviews3" class="col-6 col-sm-4 col-md-2 rewiews__link"  data-toggle="modal" data-target="#modal-review1">
+                    <a href="#reviews3" class="col-6 col-md-2 rewiews__link"  data-toggle="modal" data-target="#modal-review1">
                       <img src="<?php bloginfo('template_url') ?>/images/reviews6.jpg" alt="Отзывы Голден Строй" class="reviews__img">
                       <span class="reviews__author">ООО “Сеть Плюс”</span>
                     </a>
                 </div>
+              <div class="row justify-content-around">
+                <a href="<?php bloginfo('template_url') ?>/docs/letter1.pdf" target="_blank" class="col-6 col-md-2 rewiews__link">
+                  <img src="<?php bloginfo('template_url') ?>/images/Screenshot1.png" alt="Отзывы Голден Строй" class="reviews__img">
+                  <span class="reviews__author">Генеральный директор ООО "ОптимаСмарт" Журавлев О.И.</span>
+                </a>
+                <a href="<?php bloginfo('template_url') ?>/docs/letter2.pdf" target="_blank" class="col-6 col-md-2 rewiews__link">
+                  <img src="<?php bloginfo('template_url') ?>/images/Screenshot1.png" alt="Отзывы Голден Строй" class="reviews__img">
+                  <span class="reviews__author">Заместитель генерального директора ООО "М-корпорация" А.В.Береснев</span>
+                </a>
+              </div>
             </div>
     	</section>
 

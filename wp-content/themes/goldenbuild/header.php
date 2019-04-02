@@ -36,10 +36,10 @@
                                 <a class="nav-link" href="<?php echo get_home_url() . '/#services'; ?>">Услуги</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo get_home_url() . '/#repairs'; ?>">Прайс-листы</a>
+                                <a class="nav-link" href="<?php echo get_home_url() . '/#portfolio'; ?>">Портфолио</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo get_home_url() . '/#application'; ?>">Вакансии</a>
+                                <a class="nav-link" href="<?php echo get_home_url() . '/#reviews'; ?>">Отзывы</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="<?php echo get_home_url() . '/#application-contacts'; ?>">Контакты</a>
