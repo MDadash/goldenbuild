@@ -140,6 +140,10 @@ header {
 .navbar-dark .navbar-nav .nav-link:hover {
 	color: #f5c905;
 }
+.dropdown-item.active,
+.dropdown-item:active {
+	background-color: #f5c905;
+}
 
 .company-feature {
 	float: left;
@@ -302,6 +306,9 @@ section.repairs {
 }
 .repairs__img img{
 	width: 100%;
+	max-height: 385px;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 .repairs__price {
 	font-size: 30px;
@@ -327,6 +334,7 @@ __________________________________________*/
 }
 .additional-services img {
 	width: 100%;
+	height: 345px;
 	-o-object-fit: cover;
 	object-fit: cover;
 }
@@ -339,6 +347,7 @@ __________________________________________*/
 	left: 0;
 	right: 0;
 	bottom: 20px;
+	text-shadow: 0px 0px 6px #000;
 }
 .additional-services__heading:hover,
 .additional-services__heading:focus {
@@ -391,12 +400,13 @@ section.partnership {
 	margin: 50px 0;
 }
 .partnership__img {
-	height: 150px;
+	height: 100px;
 }
 .partnership__description {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	position: relative;
+	font-weight: 600;
 }
 .partnership__description--number {
 	display: inline-block;
@@ -420,8 +430,7 @@ __________________________________________*/
 .workexamples__link {
 	display: inline-block;
 }
-.workexamples__link:hover img,
-.rewiews__link:hover img {
+.workexamples__link:hover img {
 	-webkit-box-shadow: 0 0 5px 2px rgba(245,201,5,1);
 	box-shadow: 0 0 5px 2px rgba(245,201,5,1);
 }
@@ -430,6 +439,48 @@ __________________________________________*/
 	object-fit: cover;
 	max-width: 100%;
 	height: 200px;
+}
+
+.workexamples__gallery {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+.workexamples .wp-block-image {
+	width: 24%;
+	max-height: 200px;
+}
+.workexamples .wp-block-image img {
+	width: 100%;
+}
+
+.tooltip-wrap {
+  position: relative;
+}
+.tooltip-wrap .tooltiptext {
+  visibility: hidden;
+  /*width: 200%;*/
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 12px;
+  position: absolute;
+  z-index: 1;
+  left: 5%;
+  bottom: 85%;
+}
+.tooltip-wrap:hover .tooltiptext {
+  visibility: visible;
 }
 
 /* REVIEWS section styles
@@ -474,13 +525,52 @@ __________________________________________*/
 	width: 66%
 }
 .application--padding {
-	padding: 45px 0;
+	padding: 53px 0;
 }
 .application--padding .application__image {
-	left: -310px;
-	bottom: -45px;
+	left: -91px;
+	bottom: -53px;
 	max-width: unset;
 }
+.application--padding div.wpcf7 input[type="file"] {
+	margin-top: 20px;
+}
+
+.application--padding .wp-form__wrap {
+  max-width: 550px;
+}
+.application--padding  .wpcf7-response-output.wpcf7-validation-errors {
+	color: red;
+	width: 94%;
+}
+
+.input-counts {
+width: 0.1px;
+height: 0.1px;
+opacity: 0;
+overflow: hidden;
+position: absolute;
+z-index: -1;
+}
+label.input-counts-label[for="input-counts"] {
+  font-size: 1.25em;
+  font-weight: 700;
+  display: inline-block;
+  cursor: pointer;
+	max-width: 100%;
+	height: 26px;
+	overflow: hidden;
+}
+
+label.input-counts-label[for="input-counts"]:focus,
+label.input-counts-label[for="input-counts"]:hover {
+  color: #f1c425;
+}
+
+input[type="file"] + span.wpcf7-not-valid-tip {
+	color: green;
+}
+
 
 /* FOOTER styles
 __________________________________________*/
@@ -495,13 +585,13 @@ footer {
 }
 .social-icons a {
 	display: inline-block;
-	width: 67px;
-	height: 67px;
+	width: 52px;
+	height: 52px;
 	border: 2px solid #aaa9a9;
 	border-radius: 50%;
-	font-size: 40px;
+	font-size: 28px;
 	text-align: center;
-	line-height: 60px;
+	line-height: 48px;
 	margin: 0 0 10px 15px;
 }
 .social-icons a:hover,
@@ -510,49 +600,58 @@ footer {
 	color: #f5c905;
 	border: 2px solid #f5c905;
 }
+.footer__policies {
+	text-decoration: underline;
+}
+.footer__policies:hover,
+.footer__policies:active,
+.footer__policies:focus {
+	color: #f5c905;
 
-/* MODAL WINDOW for reviews*/
-.modal-dialog {
-	max-width: 450px;
-	margin-left: auto;
-	margin-right: auto;
-	font-weight: 300;
+}
 
-	background: #fff;
-	border: 1px solid #000;
-	padding: 10px;
-}
-.modal-content {
-	color: #000;
-	padding: 20px;
-	text-align: justify;
-	border: 1px solid black;
-	background: #fff;
-	border-radius: 0;
-}
-.modal-review__author {
-	text-align: right;
-	font-weight: 500;
-}
-.modal-title {
-	text-align: center;
-}
-.modal__close {
-	background: #ff0000;
-	border: 2px solid black;
-	border-radius: 0;
-	padding: 10px 15px;
-	color: #fff;
-	text-transform: uppercase;
-	margin: 0 auto;
-}
-.modal__close:hover,
-.modal__close:focus,
-.modal__close:active {
-	outline: none;
-	background: #f1c425;
-	color: #000;
-}
+/*!* MODAL WINDOW for reviews*!*/
+/*.modal-dialog {*/
+	/*max-width: 450px;*/
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
+	/*font-weight: 300;*/
+
+	/*background: #fff;*/
+	/*border: 1px solid #000;*/
+	/*padding: 10px;*/
+/*}*/
+/*.modal-content {*/
+	/*color: #000;*/
+	/*padding: 20px;*/
+	/*text-align: justify;*/
+	/*border: 1px solid black;*/
+	/*background: #fff;*/
+	/*border-radius: 0;*/
+/*}*/
+/*.modal-review__author {*/
+	/*text-align: right;*/
+	/*font-weight: 500;*/
+/*}*/
+/*.modal-title {*/
+	/*text-align: center;*/
+/*}*/
+/*.modal__close {*/
+	/*background: #ff0000;*/
+	/*border: 2px solid black;*/
+	/*border-radius: 0;*/
+	/*padding: 10px 15px;*/
+	/*color: #fff;*/
+	/*text-transform: uppercase;*/
+	/*margin: 0 auto;*/
+/*}*/
+/*.modal__close:hover,*/
+/*.modal__close:focus,*/
+/*.modal__close:active {*/
+	/*outline: none;*/
+	/*background: #f1c425;*/
+	/*color: #000;*/
+/*}*/
 
 /* PAGE 2 - ADDITIONAL SERVICES styles
 __________________________________________*/
@@ -580,8 +679,8 @@ __________________________________________*/
 	object-fit: cover;
 }
 
-	/*PORTFOLIO page
-    __________________________________________*/
+/*PORTFOLIO page
+__________________________________________*/
 section.portfolio {
 	padding: 50px 0;
 }
@@ -602,6 +701,34 @@ section.portfolio {
 .portfolio__heading {
 	margin-top: 20px;
 }
+.portfolio_links {
+
+}
+.prev_link {
+	float: left;
+	text-decoration: underline;
+}
+.next_link {
+	float: right;
+	text-decoration: underline;
+}
+
+
+/*POLICIES page
+__________________________________________*/
+section.policies {
+	padding: 50px 0;
+}
+.policies__heading {
+	font-size: 30px;
+}
+.policies ol li {
+	margin-bottom: 15px;
+}
+.policies ol li strong {
+	font-size: 20px;
+}
+
 
 /* MEDIA QUERIES
 __________________________________________*/
@@ -609,6 +736,12 @@ __________________________________________*/
 	header .container,
 	footer .container{
 		max-width: 100%;
+	}
+}
+@media screen and (min-width: 991px) and (max-width: 1199px) {
+	.application--padding .application__image {
+		left: -180px;
+		bottom: -53px;
 	}
 }
 
@@ -665,6 +798,10 @@ __________________________________________*/
 
 	.application--padding .application__option {
 		width: auto;
+	}
+	label.input-counts-label[for="input-counts"] {
+		height: auto;
+		overflow: unset;
 	}
 }
 
@@ -728,6 +865,9 @@ __________________________________________*/
 	.reviews__heading {
 		margin: 20px 0;
 	}
+	.workexamples .wp-block-image {
+		width: 49%;
+	}
 
 	.application--padding .application__option {
 		text-align: justify;
@@ -737,8 +877,8 @@ __________________________________________*/
 		font-size: 24px;
 	}
 	.social-icons a {
-		width: 47px;
-		height: 47px;
+		width: 42px;
+		height: 42px;
 		line-height: 40px;
 		font-size: 20px;
 	}
@@ -782,6 +922,9 @@ __________________________________________*/
 	}
 
 	.wp-block-image {
+		width: 100%;
+	}
+	.workexamples .wp-block-image {
 		width: 100%;
 	}
 }

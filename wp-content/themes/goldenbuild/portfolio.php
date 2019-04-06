@@ -16,6 +16,15 @@ Template Post Type: post
                         <?php the_post(); the_content(); ?>
                     </div>
 
+              <div class="my-3 w-100 clearfix portfolio_links">
+                  <span class="prev_link">
+                      <?php previous_post_link('%link', 'Предыдущая работа', true); ?>
+                  </span>
+                  <span class="next_link">
+                      <?php next_post_link('%link', 'Следующая работа', true); ?>
+                  </span>
+              </div>
+
             </div>
         </div>
     </section>

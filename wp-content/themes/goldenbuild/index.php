@@ -112,7 +112,7 @@ get_header();
             </div>
     	</section>
 
-    	<section class="additional-services">
+    	<section class="additional-services" id="additional-services">
     		<div class="container">
     			<div class="row">
 		    		<h3 class="col-12">Наши дополнительные услуги</h3>
@@ -140,7 +140,6 @@ get_header();
                         <?php endwhile; ?>
 	    			</div>
 	    			<div class="col-md-5">
-	    				<img src="<?php bloginfo('template_url') ?>/images/adv1.jpg" alt="Преимущества компании Голден Строй" class="advantages__img">
 	    				<img src="<?php bloginfo('template_url') ?>/images/adv2.jpg" alt="Преимущества компании Голден Строй" class="advantages__img">
 	    				<img src="<?php bloginfo('template_url') ?>/images/adv3.jpg" alt="Преимущества компании Голден Строй" class="advantages__img">
 	    				<img src="<?php bloginfo('template_url') ?>/images/adv4.jpg" alt="Преимущества компании Голден Строй" class="advantages__img">
@@ -158,7 +157,6 @@ get_header();
 	    			</div>
 	    			<div class="col-md-8">
 	    				<ol class="builder__list">
-	    					<li class="builder__item">Опыт фирмы играет важную роль, это первая характеристика на которую стоит обратить особое внимание. Если строительная организация функционирует месяц или несколько недель, рекомендуем воздержаться от такого выбора.</li>
 	    					<li class="builder__item">Цены на предоставление услуг не должны быть слишком низкими, это уже наводит на подозрение, что работы будут выполнены некачественно. Ценовая политика должна быть на уровне среднего сегмента. При подписании договорного соглашения внимательно просматривайте все пункты, при оговорке низких цен могут быть дополнительные условия.</li>
 	    					<li class="builder__item">Строительная фирма должна иметь все разрешительные документы на осуществление и предоставление такого рода услуг. Это могут быть сертификаты, лицензии, доказательства прохождения специалистов для повышения квалификации.</li>
 	    					<li class="builder__item">При поиске организаций через сеть Интернет, обязательно ознакомьтесь с отзывами клиентов, просмотрите форумы с обсуждениями. Если есть негативное мнение предшественников, стоит поискать другую компанию.</li>
@@ -167,10 +165,9 @@ get_header();
 	    				</ol>
 	    			</div>
 	    			<div class="col-md-4">
-	    				<img src="" alt="">
-	    				<img src="" alt="">
-	    				<img src="" alt="">
-	    				<img src="" alt="">
+	    				<img src="<?php bloginfo('template_url') ?>/images/right1.jpg" alt="" class="advantages__img">
+	    				<img src="<?php bloginfo('template_url') ?>/images/right2.jpg" alt="" class="advantages__img">
+	    				<img src="<?php bloginfo('template_url') ?>/images/right3.jpg" alt="" class="advantages__img">
 	    			</div>
 	    			<div class="col-12">
 	    				<p>Строительно-ремонтная компания “Голден Строй” имеет все вышеперечисленные характеристики и готова предоставить квалифицированных строителей для выполнения строительно-монтажных работ. Мы знаем как выбрать надежного подрядчика, и готовы проконсультировать вас по всем вопросам. Услуги выполняются с соблюдением стандартов и норм проектно-технической документации в утвержденные с заказчиком сроки.</p>
@@ -248,10 +245,19 @@ get_header();
     	<section class="workexamples container" id="portfolio">
             <div class="row">
                 <h3 class="col-12 workexamples__heading">Выполненные работы</h3>
+              <div class="workexamples__gallery">
+                <?php $the_query = new WP_Query('p=245'); ?>
+                <?php while  ($the_query->have_posts() ) : $the_query->the_post(); ?>
+                    <?php the_content(); ?>
+                <?php endwhile; ?>
+              </div>
                 <?php
                     $query = new WP_Query( array( 'category_name' => 'portfolio' ) );
                     while ( $query->have_posts() ) { $query->the_post(); ?>
-                        <a href="<?php echo get_permalink(); ?>" class="col-12 col-md-4 my-3 workexamples__link"><?php the_post_thumbnail(); ?></a>
+                        <a href="<?php echo get_permalink(); ?>" class="col-12 col-md-4 my-3 workexamples__link tooltip-wrap">
+                            <?php the_post_thumbnail(); ?>
+                            <span class="tooltiptext"><?php the_title(); ?></span>
+                        </a>
                 <?php } ?>
             </div>
     	</section>
@@ -260,22 +266,35 @@ get_header();
             <div class="container">
                 <div class="row justify-content-around">
                     <h3 class="col-12 reviews__heading">Отзывы и благодарности</h3>
-                    <a href="#reviews1" class="col-6 col-md-2 rewiews__link" data-toggle="modal" data-target="#modal-review1">
+
+                    <p class="col-6 col-md-2 rewiews__link mt-3">
                       <img src="<?php bloginfo('template_url') ?>/images/reviews2.jpg" alt="Отзывы Голден Строй" class="reviews__img">
                       <span class="reviews__author">ООО “Сеть Плюс”</span>
-                    </a>
-                    <a href="#reviews2" class="col-6 col-md-2 rewiews__link" data-toggle="modal" data-target="#modal-review2">
+                    </p>
+                    <div class="col-12 col-md-10 mt-3">
+                      <h5>Ремонт магазина в тц</h5>
+                      <p>На меня, как на управляющего магазином, была возложена обязанность найти надежную строительно-ремонтную бригаду для ремонта в ТЦ. Компанию “Голден Строй” нашел по отзывам, клиенты уверяли, что подрядчик добросовестно и качественно выполняет поставленные на него обязанности. После звонка в компанию, специалисты сразу же приехали на объект для осмотра и составили объективную оценку по дальнейшему планированию. Могу сказать точно, ценовая политика у них на уровне среднего сегмента, со сроками не подвели, объект сдали в назначенные сроки. Спасибо менеджерам и строителям за качественно выполненные работы!</p>
+                    </div>
+
+
+                    <p class="col-6 col-md-2 rewiews__link mt-3">
                       <img src="<?php bloginfo('template_url') ?>/images/reviews3.jpg" alt="Отзывы Голден Строй" class="reviews__img">
                       <span class="reviews__author">ООО “Дионик”</span>
-                    </a>
-                    <a href="#reviews3" class="col-6 col-md-2 rewiews__link"  data-toggle="modal" data-target="#modal-review3">
+                    </p>
+                    <div class="col-12 col-md-10 mt-3">
+                      <h5>Ремонт офиса</h5>
+                      <p>Долго сомневались с выбором надежного подрядчика для выполнения строительных работ в нашем офисе.Так как предстоял капитальный ремонт, нам нужно было провести коммуникацию, электрику, выполнить комплексные работы по установке сантехники, радиаторов. Голден Строй отлично справилась со своими обязанностями, составила всю необходимую документацию по расходной и технической части. Сотрудники выполнили заказ в оговоренные сроки, все работы проводились под пристальным присмотром организаторов и проектантов. Рекомендуем к сотрудничеству!</p>
+                    </div>
+
+
+                    <p class="col-6 col-md-2 rewiews__link mt-3">
                       <img src="<?php bloginfo('template_url') ?>/images/reviews5.jpg" alt="Отзывы Голден Строй" class="reviews__img">
                       <span class="reviews__author">ООО “Варис”</span>
-                    </a>
-                    <a href="#reviews3" class="col-6 col-md-2 rewiews__link"  data-toggle="modal" data-target="#modal-review1">
-                      <img src="<?php bloginfo('template_url') ?>/images/reviews6.jpg" alt="Отзывы Голден Строй" class="reviews__img">
-                      <span class="reviews__author">ООО “Сеть Плюс”</span>
-                    </a>
+                    </p>
+                    <div class="col-12 col-md-10 mt-3">
+                      <h5>Штукатурка и покраска зданияя в тц</h5>
+                      <p>Компания “Голден Строй” предоставляла нам услуги по покраске и штукатурке фасада. Помимо состава комплексных услуг,  нам нужно было провести капитальное устранение дефектов и утеплить офисное здание. Специалисты выполнили качественную штукатурно-малярную работу. На период выполнения услуг составили официальный договор, обязанности которого компания выполнила в полном объеме.  Работа сделана качественно и в срок.</p>
+                    </div>
                 </div>
               <div class="row justify-content-around">
                 <a href="<?php bloginfo('template_url') ?>/docs/letter1.pdf" target="_blank" class="col-6 col-md-2 rewiews__link">
@@ -283,7 +302,7 @@ get_header();
                   <span class="reviews__author">Генеральный директор ООО "ОптимаСмарт" Журавлев О.И.</span>
                 </a>
                 <a href="<?php bloginfo('template_url') ?>/docs/letter2.pdf" target="_blank" class="col-6 col-md-2 rewiews__link">
-                  <img src="<?php bloginfo('template_url') ?>/images/Screenshot1.png" alt="Отзывы Голден Строй" class="reviews__img">
+                  <img src="<?php bloginfo('template_url') ?>/images/sertifikat.png" alt="Отзывы Голден Строй" class="reviews__img">
                   <span class="reviews__author">Заместитель генерального директора ООО "М-корпорация" А.В.Береснев</span>
                 </a>
               </div>
@@ -293,21 +312,25 @@ get_header();
     	<section class="application application--padding" id="application-contacts">
     		<div class="container">
     			<div class="row">
-    				<div class="col-md-6 col-lg-8">
-    					<p class="application__option">Есть смета конкурентов?</p>
-    					<p class="application__option">Вам уже составили смету в другой компании?</p>
-    					<p class="application__option">Отправьте её нам, мы проверим цены и ошибки в расчетах.</p>
-    					<p class="application__option">Возможно сможем уменьшить стоимость. Аргументируем на чем можно сэкономить и какие позиция выше рыночной стоимости.</p>
-    				</div>
-    				<div class="col-md-6 col-lg-4">
+<!--    				<div class="col-md-6 col-lg-8">-->
+<!--    					<p class="application__option">Есть смета конкурента?</p>-->
+<!--    					<p class="application__option">Отправьте ее нам, мы проверим цены и расчеты!</p>-->
+<!--    					<p class="application__option">Возможно сможем предложить Вам более выгодное коммерческое предложение!</p>-->
+<!--    					<p class="application__option">+7 495 142 93 83</p>-->
+<!--    				</div>-->
+<!--    				<div class="col-md-6 col-lg-4">-->
+                     <div class="col-12">
                         <div class="wp-form__wrap">
                             <img src="<?php bloginfo('template_url') ?>/images/form-photo3.png" alt="Оставьте заявку прямо сейчас и получите смету под ваш бюджет" class="application__image d-none d-lg-block">
-                            <?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]'); ?>
+                            <?php echo do_shortcode('[contact-form-7 id="205" title="Contact form - send file"]'); ?>
                         </div>
-    				</div>
+                     </div>
+<!--    				</div>-->
+
     			</div>
     		</div>
     	</section>
+
     </main>
 <?php
 
