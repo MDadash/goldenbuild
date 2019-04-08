@@ -10,9 +10,10 @@ Template Name: aditionalservices
             <div class="row">
                 <div class="col-12">
                     <?php
+                    $i = 1;
                     $query = new WP_Query( array( 'category_name' => 'additional-services' ) );
                     while ( $query->have_posts() ) { $query->the_post(); ?>
-                        <article class="article row mt-0 mb-0">
+                        <article class="article row mt-0 mb-0" id="additionat-service<?php echo $i;?>">
 <!--                            <div class="col-12 col-lg-4">-->
 <!--                                --><?php //the_post_thumbnail(); ?>
 <!--                            </div>-->
@@ -21,7 +22,7 @@ Template Name: aditionalservices
                                 <div class="article__content"> <?php the_content(); ?> </div>
                             </div>
                         </article>
-                    <?php } ?>
+                    <?php $i++;  } ?>
                 </div>
             </div>
         </section>

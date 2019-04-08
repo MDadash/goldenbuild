@@ -41,13 +41,13 @@
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                  aria-expanded="false">Услуги</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="<?php echo get_home_url() . '/#additional-services'; ?>">Ремонтно-отделочные
+                <a class="dropdown-item" href="<?php echo get_home_url() . '/#repairs'; ?>">Ремонтно-отделочные
                   работы</a>
-                <a class="dropdown-item" href="<?php echo get_home_url() . '/#additional-services'; ?>">Дизайн интерьеров и
+                <a class="dropdown-item" href="<?php echo get_home_url() . '/additionalservises/#additionat-service1'; ?>">Дизайн интерьеров и
                   проектирование</a>
-                <a class="dropdown-item" href="<?php echo get_home_url() . '/#additional-services'; ?>">Фасадные работы</a>
-                <a class="dropdown-item" href="<?php echo get_home_url() . '/#additional-services'; ?>">Кровельные работы</a>
-                <a class="dropdown-item" href="<?php echo get_home_url() . '/#additional-services'; ?>">Общестроительные работы</a>
+                <a class="dropdown-item" href="<?php echo get_home_url() . '/additionalservises/#additionat-service2'; ?>">Фасадные работы</a>
+                <a class="dropdown-item" href="<?php echo get_home_url() . '/additionalservises/#additionat-service3'; ?>">Кровельные работы</a>
+                <a class="dropdown-item" href="<?php echo get_home_url() . '/additionalservises/#additionat-service4'; ?>">Общестроительные работы</a>
               </div>
             </li>
             <li class="nav-item">
